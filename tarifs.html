@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
 .pricing-section {
@@ -73,7 +73,7 @@
   border-color: var(--accent);
 }
 .pricing-name {
-  font-family: 'Fraunces', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 8px;
@@ -87,7 +87,7 @@
   min-height: 42px;
 }
 .pricing-price {
-  font-family: 'Fraunces', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 56px;
   font-weight: 700;
   letter-spacing: -2px;
@@ -96,6 +96,91 @@
   margin-bottom: 4px;
 }
 .pricing-price em { color: var(--accent); font-style: italic; }
+.pricing-price-strike {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  color: var(--ink-mute);
+  text-decoration: line-through;
+  margin-left: 4px;
+  font-weight: 500;
+}
+.pricing-launch-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent);
+  color: var(--paper);
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.pricing-guarantee {
+  margin-top: 80px;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 36px 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.pricing-guarantee-icon {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: rgba(16,185,129,0.15);
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+.pricing-guarantee h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.pricing-guarantee p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+.launch-banner {
+  background: linear-gradient(90deg, #0a0a09, #1a1a17, #0a0a09);
+  color: var(--paper);
+  padding: 10px 24px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.launch-banner .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+  animation: pulse 2s infinite;
+}
+.launch-banner strong { color: var(--accent); font-weight: 700; }
+.launch-banner a { color: var(--paper); text-decoration: underline; font-weight: 600; }
+body.with-banner { padding-top: 40px; }
+nav.with-banner { top: 40px; }
 .pricing-price-suffix {
   font-size: 13px;
   color: var(--ink-mute);
@@ -164,7 +249,7 @@
   gap: 48px;
 }
 .roi-inputs h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 22px;
   margin-bottom: 24px;
   color: var(--ink);
@@ -180,7 +265,7 @@
 .roi-input-value {
   color: var(--accent);
   font-weight: 700;
-  font-family: 'Fraunces', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
 }
 .roi-slider {
@@ -228,7 +313,7 @@
   background: var(--accent-soft);
 }
 .roi-result-pack {
-  font-family: 'Fraunces', serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 16px;
   margin-bottom: 4px;
@@ -240,7 +325,7 @@
   margin-bottom: 12px;
 }
 .roi-result-roi {
-  font-family: 'Fraunces', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 32px;
   font-weight: 700;
   letter-spacing: -1px;
@@ -265,9 +350,13 @@
 }
 </style>
 </head>
-<body>
+<body class="with-banner">
+<div class="launch-banner">
+  <span class="dot"></span>
+  <span><strong>Offre lancement</strong> · les 5 premiers clients à <strong>-40%</strong> sur tous les packs · <a href="contact.html">En profiter →</a></span>
+</div>
 <div class="scroll-progress" id="scrollProgress"></div>
-<nav id="nav">
+<nav id="nav" class="with-banner">
   <div class="nav-left">
     <button class="menu-toggle" aria-label="Ouvrir le menu">
       <span class="menu-toggle-icon"><span></span><span></span><span></span></span>
@@ -279,7 +368,7 @@
       <span class="icon-moon">🌙</span>
       <span class="icon-sun">☀️</span>
     </button>
-    <a href="/contact" class="cta-nav">Audit gratuit</a>
+    <a href="contact.html" class="cta-nav">Audit gratuit</a>
   </div>
 </nav>
 
@@ -287,14 +376,10 @@
 
 <aside class="nav-panel" id="navPanel">
   <ul class="nav-links">
-    <li><a href="/">Accueil</a></li>
-    <li><a href="/audit">Audit IA</a></li>
-    <li><a href="/tarifs" class="active">Tarifs</a></li>
-    <li><a href="/methode">Méthode</a></li>
-    <li><a href="/cas-client">Cas client</a></li>
-    <li><a href="/blog">Blog</a></li>
-    <li><a href="/apropos">À propos</a></li>
-    <li><a href="/contact">Contact</a></li>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="methode.html">Méthode</a></li>
+    <li><a href="tarifs.html" class="active">Tarifs</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="nav-panel-footer">
     <div class="nav-panel-footer-label">Contact direct</div>
@@ -308,19 +393,20 @@
 
 <section class="page-hero">
   <div class="page-hero-content">
-    <div class="section-label fade-in">Tarifs</div>
+    <div class="section-label fade-in">Tarifs lancement · -40%</div>
     <h1 class="page-title fade-in">Trois packs, <em>une mission</em>.</h1>
-    <p class="page-hero-subtitle fade-in">Vous rendre visible là où vos clients vous cherchent. Sans surprise, sans engagement caché. TVA non applicable (article 293 B du CGI).</p>
+    <p class="page-hero-subtitle fade-in">Vous rendre visible là où vos clients vous cherchent. Sans surprise, sans engagement caché. <strong style="color: var(--accent);">Tarif lancement -40% appliqué automatiquement aux 5 premières signatures.</strong> TVA non applicable (article 293 B du CGI).</p>
   </div>
 </section>
 
 <section class="pricing-section">
-  <div class="pricing-grid">
+  <div class="pricing-grid" style="margin-bottom: 0;">
     <div class="pricing-card fade-in" id="audit">
+      <div class="pricing-launch-tag"><span style="width:6px;height:6px;background:white;border-radius:50%"></span>-40% Lancement</div>
       <div class="pricing-name">Audit</div>
       <div class="pricing-desc">Comprendre exactement où vous en êtes.</div>
-      <div class="pricing-price"><em>290</em>€</div>
-      <div class="pricing-price-suffix">Paiement unique · TTC</div>
+      <div class="pricing-price"><em>174</em>€<span class="pricing-price-strike">290€</span></div>
+      <div class="pricing-price-suffix">Paiement unique · TTC · livré sous 5 jours</div>
       <ul class="pricing-features">
         <li>40 tests sur les 4 IA majeures</li>
         <li>Rapport PDF de 10 pages</li>
@@ -328,15 +414,16 @@
         <li>Analyse de 3 concurrents</li>
         <li>10 recommandations chiffrées</li>
         <li>Visio de restitution 30 min</li>
-        <li>Livraison sous 5 jours</li>
+        <li>Livraison sous 5 jours garantie</li>
       </ul>
-      <a href="/contact?pack=audit" class="pricing-cta ghost">Choisir cet audit</a>
+      <a href="contact.html?pack=audit" class="pricing-cta ghost">Choisir cet audit</a>
     </div>
     <div class="pricing-card featured fade-in" id="demarrage">
+      <div class="pricing-launch-tag"><span style="width:6px;height:6px;background:white;border-radius:50%"></span>-40% Lancement</div>
       <div class="pricing-name">Démarrage</div>
       <div class="pricing-desc">Audit + implémentation des fondations.</div>
-      <div class="pricing-price"><em>1 490</em>€</div>
-      <div class="pricing-price-suffix">Paiement unique · 1 mois</div>
+      <div class="pricing-price"><em>894</em>€<span class="pricing-price-strike">1 490€</span></div>
+      <div class="pricing-price-suffix">Paiement unique · 1 mois · garanti 30 jours</div>
       <ul class="pricing-features">
         <li>Tout le pack Audit inclus</li>
         <li>Optimisation Google Business</li>
@@ -345,13 +432,15 @@
         <li>1 article de blog optimisé IA</li>
         <li>Campagne d'avis Google</li>
         <li>Acompte 30% à la signature</li>
+        <li><strong>Remboursé si non livré</strong></li>
       </ul>
-      <a href="/contact?pack=demarrage" class="pricing-cta primary">Démarrer maintenant</a>
+      <a href="contact.html?pack=demarrage" class="pricing-cta primary">Démarrer maintenant →</a>
     </div>
     <div class="pricing-card fade-in" id="croissance">
+      <div class="pricing-launch-tag"><span style="width:6px;height:6px;background:white;border-radius:50%"></span>-40% Lancement</div>
       <div class="pricing-name">Croissance</div>
       <div class="pricing-desc">Suivi mensuel pour résultats durables.</div>
-      <div class="pricing-price"><em>590</em>€<span style="font-size: 24px; font-weight: 400;">/mois</span></div>
+      <div class="pricing-price"><em>354</em>€<span style="font-size: 22px; font-weight: 400;">/mois</span><span class="pricing-price-strike">590€</span></div>
       <div class="pricing-price-suffix">Engagement 6 mois · Préavis 1 mois</div>
       <ul class="pricing-features">
         <li>40 tests IA mensuels</li>
@@ -362,7 +451,14 @@
         <li>Veille concurrentielle</li>
         <li>Visio mensuelle de point</li>
       </ul>
-      <a href="/contact?pack=croissance" class="pricing-cta ghost">S'engager 6 mois</a>
+      <a href="contact.html?pack=croissance" class="pricing-cta ghost">S'engager 6 mois</a>
+    </div>
+  </div>
+  <div class="pricing-guarantee fade-in" style="margin-top: 64px;">
+    <div class="pricing-guarantee-icon">✓</div>
+    <div>
+      <h3>Garantie satisfait ou remboursé · 30 jours</h3>
+      <p>Pack Démarrage non livré dans les délais ou restitution non convaincante ? On rembourse intégralement, sans débat. Aucun engagement caché, aucune clause d'usure. <strong>On préfère perdre un client qu'une réputation.</strong></p>
     </div>
   </div>
 </section>
@@ -396,17 +492,17 @@
       </div>
       <div class="roi-results">
         <div class="roi-result-row" id="auditResult">
-          <div class="roi-result-pack">Pack Audit · 290€</div>
+          <div class="roi-result-pack">Pack Audit · <s style="opacity:0.5">290€</s> <strong style="color:var(--accent)">174€</strong></div>
           <div class="roi-result-detail">Diagnostic seul, sans implémentation. Aucun client gagné directement.</div>
-          <div class="roi-result-roi" id="auditRoi">-290 €</div>
+          <div class="roi-result-roi" id="auditRoi">-174 €</div>
         </div>
         <div class="roi-result-row" id="demarrageResult">
-          <div class="roi-result-pack">Pack Démarrage · 1 490€</div>
+          <div class="roi-result-pack">Pack Démarrage · <s style="opacity:0.5">1 490€</s> <strong style="color:var(--accent)">894€</strong></div>
           <div class="roi-result-detail">Implémentation des bases. Efficacité 50%, ramp-up 4 mois.</div>
           <div class="roi-result-roi" id="demarrageRoi">+0 €</div>
         </div>
         <div class="roi-result-row" id="croissanceResult">
-          <div class="roi-result-pack">Pack Croissance · 590€/mois</div>
+          <div class="roi-result-pack">Pack Croissance · <s style="opacity:0.5">590€/mois</s> <strong style="color:var(--accent)">354€/mois</strong></div>
           <div class="roi-result-detail">Suivi continu. Efficacité 100%, ramp-up 6 mois.</div>
           <div class="roi-result-roi" id="croissanceRoi">+0 €</div>
         </div>
@@ -420,15 +516,15 @@
   <div class="footer-content">
     <div>
       <a href="/" class="logo" style="margin-bottom: 16px;"><img src="assets/logo-symbole.png" alt="Growth-IA" class="logo-img"><span class="logo-text">Growth-IA</span></a>
-      <p class="footer-brand">Spécialiste de la visibilité IA pour PME de Saint-Priest et de la région lyonnaise.</p>
+      <p class="footer-brand">Spécialiste de la visibilité IA pour PME de Saint-Priest, Lyon, Vienne et alentours.</p>
     </div>
-    <div class="footer-col"><h4>Pages</h4><a href="/audit">Audit IA</a><a href="/tarifs">Tarifs</a><a href="/methode">Méthode</a><a href="/cas-client">Cas client</a><a href="/apropos">À propos</a></div>
-    <div class="footer-col"><h4>Offres</h4><a href="/tarifs#audit">Audit (290€)</a><a href="/tarifs#demarrage">Démarrage (1490€)</a><a href="/tarifs#croissance">Croissance (590€/mois)</a></div>
+    <div class="footer-col"><h4>Pages</h4><a href="methode.html">Méthode</a><a href="tarifs.html">Tarifs</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h4>Offres lancement</h4><a href="tarifs.html#audit">Audit · 174€</a><a href="tarifs.html#demarrage">Démarrage · 894€</a><a href="tarifs.html#croissance">Croissance · 354€/mois</a></div>
     <div class="footer-col"><h4>Contact</h4><a href="mailto:contact@growth-ia.com">contact@growth-ia.com</a><a href="tel:0652197721">06 52 19 77 21</a></div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Growth-IA · Auto-entreprise · Ilyes Bennacer · Saint-Priest 69800</span>
-    <span><a href="/mentions" style="color: inherit;">Mentions légales</a></span>
+    <span><a href="mentions.html" style="color: inherit;">Mentions légales</a></span>
   </div>
 </footer>
 
@@ -457,24 +553,24 @@ function calculateROI() {
   
   const profitPerClient = basket * margin;
   
-  // Audit : 0% efficacité (diagnostic seulement)
-  const auditROI = -290;
+  // Audit : 0% efficacité (diagnostic seulement) - prix lancement
+  const auditROI = -174;
   
-  // Démarrage : 50% efficacité, ramp-up 4 mois
+  // Démarrage : 50% efficacité, ramp-up 4 mois - prix lancement
   let demarrageGain = 0;
   for (let m = 1; m <= horizon; m++) {
     const rampFactor = Math.min(m / 4, 1);
     demarrageGain += clients * 0.5 * rampFactor * profitPerClient;
   }
-  const demarrageROI = demarrageGain - 1490;
+  const demarrageROI = demarrageGain - 894;
   
-  // Croissance : 100% efficacité, ramp-up 6 mois
+  // Croissance : 100% efficacité, ramp-up 6 mois - prix lancement
   let croissanceGain = 0;
   for (let m = 1; m <= horizon; m++) {
     const rampFactor = Math.min(m / 6, 1);
     croissanceGain += clients * 1.0 * rampFactor * profitPerClient;
   }
-  const croissanceCost = 590 * horizon;
+  const croissanceCost = 354 * horizon;
   const croissanceROI = croissanceGain - croissanceCost;
   
   const auditEl = document.getElementById('auditRoi');

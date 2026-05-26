@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Growth-IA — Visibilité IA pour PME à Saint-Priest et région lyonnaise</title>
+<title>Growth-IA — Soyez le pro que ChatGPT recommande à Saint-Priest, Lyon &amp; Vienne</title>
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://growth-ia.com/">
-<meta property="og:title" content="Growth-IA — Visibilité IA pour PME à Saint-Priest et région lyonnaise">
-<meta property="og:description" content="Audit et optimisation de votre visibilité dans ChatGPT, Claude, Gemini et Perplexity. Pour les PME de Saint-Priest.">
+<meta property="og:title" content="Growth-IA — Soyez le pro que ChatGPT recommande">
+<meta property="og:description" content="1 français sur 4 cherche son dentiste, son artisan ou son avocat sur ChatGPT. On vous rend visible. Guide gratuit + audit offert.">
 <meta property="og:image" content="https://growth-ia.com/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -16,11 +16,11 @@
 <meta property="og:locale" content="fr_FR">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Growth-IA — Visibilité IA pour PME à Saint-Priest et région lyonnaise">
-<meta name="twitter:description" content="Audit et optimisation de votre visibilité dans ChatGPT, Claude, Gemini et Perplexity. Pour les PME de Saint-Priest.">
+<meta name="twitter:title" content="Growth-IA — Soyez le pro que ChatGPT recommande">
+<meta name="twitter:description" content="1 français sur 4 cherche son dentiste, son artisan ou son avocat sur ChatGPT. On vous rend visible.">
 <meta name="twitter:image" content="https://growth-ia.com/assets/og-image.jpg">
 
-<meta name="description" content="Audit et optimisation de votre visibilité dans ChatGPT, Claude, Gemini et Perplexity. Pour les PME de Saint-Priest et de la région lyonnaise.">
+<meta name="description" content="Visibilité IA pour PME locales : dentistes, avocats, artisans, commerces. Apparaissez dans les réponses de ChatGPT, Claude, Gemini et Perplexity. Audit gratuit + guide PDF.">
 
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.png">
@@ -32,10 +32,7 @@
   "@type": "ProfessionalService",
   "name": "Growth-IA",
   "description": "Spécialiste de la visibilité IA pour PME. Audit et optimisation de votre présence dans ChatGPT, Claude, Gemini et Perplexity.",
-  "founder": {
-    "@type": "Person",
-    "name": "Ilyes Bennacer"
-  },
+  "founder": { "@type": "Person", "name": "Ilyes Bennacer" },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Rue des Pives",
@@ -53,14 +50,53 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 
 <style>
-/* HERO V4 — IMMERSIF */
+/* ========== BANDEAU URGENCE ========== */
+.launch-banner {
+  background: linear-gradient(90deg, #0a0a09, #1a1a17, #0a0a09);
+  color: var(--paper);
+  padding: 10px 24px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  position: relative;
+  z-index: 101;
+  border-bottom: 1px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  letter-spacing: 0.2px;
+}
+.launch-banner .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+  animation: pulse 2s infinite;
+  flex-shrink: 0;
+}
+.launch-banner strong { color: var(--accent); font-weight: 700; }
+.launch-banner a {
+  color: var(--paper);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+.launch-banner .spots { color: var(--accent); font-weight: 700; }
+nav { top: 0; }
+nav.with-banner { top: 40px; }
+body.with-banner { padding-top: 40px; }
+
+/* ========== HERO ========== */
 .hero {
-  min-height: 100vh;
-  padding: 140px 48px 100px;
+  min-height: calc(100vh - 40px);
+  padding: 120px 48px 80px;
   position: relative;
   display: flex;
   align-items: center;
@@ -70,7 +106,7 @@
 .hero-bg-grid {
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     linear-gradient(var(--grid) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size: 60px 60px;
@@ -79,22 +115,19 @@
 }
 .hero-bg-orb {
   position: absolute;
-  width: 800px;
-  height: 800px;
+  width: 800px; height: 800px;
   border-radius: 50%;
   pointer-events: none;
   filter: blur(80px);
   opacity: 0.5;
 }
 .hero-bg-orb-1 {
-  top: -200px;
-  right: -100px;
+  top: -200px; right: -100px;
   background: radial-gradient(circle, var(--accent), transparent 60%);
   animation: orbFloat1 20s ease-in-out infinite;
 }
 .hero-bg-orb-2 {
-  bottom: -300px;
-  left: -200px;
+  bottom: -300px; left: -200px;
   background: radial-gradient(circle, var(--gold), transparent 60%);
   opacity: 0.25;
   animation: orbFloat2 25s ease-in-out infinite;
@@ -120,8 +153,6 @@
   align-items: center;
 }
 
-.hero-left { position: relative; }
-
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -137,27 +168,21 @@
   text-transform: uppercase;
   margin-bottom: 32px;
 }
-.eyebrow::before {
-  content: '';
-  width: 6px; height: 6px;
-  background: var(--accent);
-  border-radius: 50%;
-  animation: pulse 2s infinite;
-}
 .eyebrow .live-dot {
   display: inline-block;
   width: 6px; height: 6px;
   background: var(--accent);
   border-radius: 50%;
+  animation: pulse 2s infinite;
 }
 
 h1.hero-title {
-  font-family: 'Fraunces', serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(40px, 5.5vw, 72px);
   font-weight: 700;
   line-height: 0.98;
   letter-spacing: -2px;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   color: var(--ink);
 }
 h1.hero-title em {
@@ -189,37 +214,37 @@ h1.hero-title .underline::after {
 @keyframes blink { 50% { border-color: transparent; } }
 
 .hero-subtitle {
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 19px;
+  line-height: 1.55;
   max-width: 560px;
   color: var(--ink-soft);
-  margin-bottom: 40px;
+  margin-bottom: 36px;
   font-weight: 300;
 }
+.hero-subtitle strong { color: var(--ink); font-weight: 600; }
 
 .hero-ctas {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 32px;
 }
+.hero-ctas .btn-primary { padding: 18px 28px; font-size: 15px; }
 
 .hero-trust {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   font-size: 13px;
   color: var(--ink-mute);
   flex-wrap: wrap;
 }
-.hero-trust .stars { color: var(--gold); letter-spacing: 2px; }
-.hero-trust .divider { color: var(--ink-mute); }
+.hero-trust .check { color: var(--green); font-weight: 700; }
+.hero-trust .divider { color: var(--ink-mute); opacity: 0.4; }
 
 /* HERO RIGHT — MOCKUP CHATGPT */
-.hero-right {
-  position: relative;
-}
+.hero-right { position: relative; }
 .chatgpt-mockup {
   background: #1a1a17;
   border: 1px solid var(--border);
@@ -231,7 +256,6 @@ h1.hero-title .underline::after {
   transition: transform 0.4s;
 }
 .chatgpt-mockup:hover { transform: rotate(0deg) scale(1.02); }
-
 .chatgpt-header {
   padding: 12px 16px;
   background: rgba(255,255,255,0.03);
@@ -256,13 +280,11 @@ h1.hero-title .underline::after {
   color: rgba(255,255,255,0.4);
   font-family: 'JetBrains Mono', monospace;
 }
-
 .chatgpt-body {
   padding: 24px;
   background: #1a1a17;
   color: rgba(255,255,255,0.95);
 }
-
 .chatgpt-question {
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
@@ -276,7 +298,6 @@ h1.hero-title .underline::after {
   color: var(--accent);
   font-weight: bold;
 }
-
 .chatgpt-answer {
   background: rgba(255,255,255,0.04);
   border-left: 2px solid var(--accent);
@@ -285,15 +306,6 @@ h1.hero-title .underline::after {
   font-size: 14px;
   line-height: 1.6;
   color: rgba(255,255,255,0.85);
-}
-.chatgpt-answer-typing {
-  display: inline-block;
-  width: 8px;
-  height: 14px;
-  background: var(--accent);
-  vertical-align: middle;
-  margin-left: 2px;
-  animation: blink 0.8s step-end infinite;
 }
 .chatgpt-recommendations {
   margin-top: 12px;
@@ -307,24 +319,7 @@ h1.hero-title .underline::after {
   gap: 8px;
 }
 .chatgpt-rec-item .num { color: var(--accent); font-weight: 600; }
-.chatgpt-rec-item.highlighted {
-  background: var(--accent-soft);
-  margin: 0 -8px;
-  padding: 8px;
-  border-radius: 4px;
-  border-left: 2px solid var(--accent);
-}
-.chatgpt-rec-item.highlighted::after {
-  content: '← VOUS';
-  font-size: 9px;
-  letter-spacing: 1px;
-  color: var(--accent);
-  font-weight: 700;
-  margin-left: auto;
-  align-self: center;
-}
 
-/* Floating tag */
 .float-tag {
   position: absolute;
   background: var(--ink);
@@ -339,24 +334,16 @@ h1.hero-title .underline::after {
   box-shadow: 0 12px 24px rgba(0,0,0,0.3);
   border: 1px solid var(--border-strong);
   animation: floatTag 4s ease-in-out infinite;
+  z-index: 2;
 }
-.float-tag-1 {
-  top: -20px;
-  right: -10px;
-  animation-delay: 0s;
-}
-.float-tag-2 {
-  bottom: -20px;
-  left: -10px;
-  animation-delay: 1s;
-}
+.float-tag-1 { top: -20px; right: -10px; animation-delay: 0s; }
+.float-tag-2 { bottom: -20px; left: -10px; animation-delay: 1s; }
 @keyframes floatTag {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
 .float-tag .icon {
-  width: 16px;
-  height: 16px;
+  width: 16px; height: 16px;
   background: var(--green);
   border-radius: 50%;
   display: flex;
@@ -368,247 +355,851 @@ h1.hero-title .underline::after {
 }
 .float-tag .icon.warn { background: var(--accent); }
 
-/* HERO STATS */
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  padding-top: 48px;
+/* ========== PERFORMANCE ATTENDUE ========== */
+.perf-section {
+  padding: 90px 48px 100px;
+  background: linear-gradient(180deg, var(--bg), color-mix(in srgb, var(--bg) 92%, var(--accent) 4%));
   border-top: 1px solid var(--border);
-  position: relative;
-  z-index: 1;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-.stat .num {
-  font-family: 'Fraunces', serif;
-  font-size: clamp(36px, 4vw, 56px);
-  font-weight: 700;
-  letter-spacing: -2px;
-  line-height: 1;
-}
-.stat .num em { color: var(--accent); font-style: italic; }
-.stat .lbl {
-  font-size: 13px;
-  color: var(--ink-mute);
-  margin-top: 8px;
-  letter-spacing: 0.5px;
-}
-
-/* SECTION SOCIAL PROOF */
-.proof-section {
-  padding: 140px 48px;
-  background: var(--bg);
-  position: relative;
-  border-top: 1px solid var(--border);
-}
-.proof-content { max-width: 1200px; margin: 0 auto; }
-
-.proof-quote {
-  text-align: center;
-  margin-bottom: 80px;
-}
-.proof-quote blockquote {
-  font-family: 'Fraunces', serif;
-  font-size: clamp(28px, 3vw, 44px);
-  line-height: 1.25;
-  font-style: italic;
-  font-weight: 500;
-  max-width: 900px;
-  margin: 0 auto 32px;
-  color: var(--ink);
-}
-.proof-quote blockquote em { color: var(--accent); }
-.proof-quote cite {
-  font-style: normal;
-  font-size: 14px;
-  color: var(--ink-mute);
-  letter-spacing: 0.5px;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 24px;
-  margin-top: 64px;
-}
-.testimonial {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 32px;
-  transition: all 0.4s;
-  position: relative;
-}
-.testimonial:hover {
-  border-color: var(--accent);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card);
-}
-.testimonial-stars {
-  color: var(--gold);
-  font-size: 14px;
-  letter-spacing: 2px;
-  margin-bottom: 16px;
-}
-.testimonial-text {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--ink);
-  margin-bottom: 24px;
-  font-style: italic;
-}
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.testimonial-avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--gold));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-family: 'Fraunces', serif;
-  font-weight: 700;
-  font-size: 18px;
-}
-.testimonial-author-info .name {
-  font-weight: 600;
-  font-size: 14px;
-  color: var(--ink);
-}
-.testimonial-author-info .role {
-  font-size: 12px;
-  color: var(--ink-mute);
-  margin-top: 2px;
-}
-.testimonial-disclaimer {
-  text-align: center;
-  margin-top: 24px;
-  font-size: 12px;
-  color: var(--ink-mute);
-  font-style: italic;
-}
-
-/* SECTION OFFRES (4 cartes) */
-.offers-section {
-  padding: 140px 48px;
-  background: var(--bg);
-  border-top: 1px solid var(--border);
-}
-.offers-content { max-width: 1280px; margin: 0 auto; }
-.offers-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  margin-bottom: 64px;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-.offers-header-text { flex: 1; min-width: 300px; }
-.offers-header-cta { font-size: 14px; }
-
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-.preview-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 36px 32px;
-  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
-  text-decoration: none;
-  color: var(--ink);
-  display: flex;
-  flex-direction: column;
   position: relative;
   overflow: hidden;
 }
-.preview-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 3px;
-  background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s;
+.perf-content { max-width: 1280px; margin: 0 auto; position: relative; }
+.perf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+  gap: 24px;
 }
-.preview-card:hover::before { transform: scaleX(1); }
-.preview-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--accent);
+.perf-header-text h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(34px, 4.2vw, 56px);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-top: 16px;
+}
+.perf-header-text h2 em { font-style: italic; color: var(--accent); font-weight: 700; }
+.perf-header-meta {
+  font-size: 13px;
+  color: var(--ink-mute);
+  max-width: 340px;
+  line-height: 1.55;
+  text-align: right;
+}
+.perf-header-meta strong { color: var(--ink); font-weight: 600; }
+
+.perf-comparator {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
   box-shadow: var(--shadow-card);
-  background: color-mix(in srgb, var(--bg-card) 80%, var(--accent) 5%);
+  margin-bottom: 36px;
 }
-.preview-card-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: var(--accent-soft);
+.perf-side {
+  padding: 44px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.perf-side.before { background: rgba(239,68,68,0.04); }
+.perf-side.after { background: rgba(16,185,129,0.04); }
+.perf-side-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.perf-side.before .perf-side-label::before {
+  content: '';
+  width: 8px; height: 8px;
+  background: #ef4444;
+  border-radius: 50%;
+}
+.perf-side.after .perf-side-label::before {
+  content: '';
+  width: 8px; height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 14px rgba(16,185,129,0.7);
+}
+.perf-score {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(72px, 9vw, 120px);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.perf-score .max {
+  font-size: 0.28em;
+  color: var(--ink-mute);
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-left: 4px;
+}
+.perf-side.after .perf-score { color: #10b981; }
+.perf-side.before .perf-score { color: #ef4444; opacity: 0.75; }
+.perf-bar {
+  height: 8px;
+  background: var(--border);
+  border-radius: 100px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+.perf-bar-fill {
+  height: 100%;
+  border-radius: 100px;
+}
+.perf-side.before .perf-bar-fill { background: #ef4444; width: 12%; }
+.perf-side.after .perf-bar-fill { background: linear-gradient(90deg, var(--accent), #10b981); width: 78%; }
+
+.perf-detail {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.perf-detail strong { color: var(--ink); font-weight: 600; }
+
+.perf-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  background: var(--bg);
+  min-width: 120px;
+  border-left: 1px dashed var(--border);
+  border-right: 1px dashed var(--border);
+}
+.perf-arrow-circle {
+  width: 60px; height: 60px;
+  background: var(--accent);
+  color: var(--paper);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
-  color: var(--accent);
-  font-size: 22px;
-  border: 1px solid var(--accent);
+  font-size: 26px;
+  font-weight: 600;
+  box-shadow: 0 12px 32px var(--accent-glow);
+  margin-bottom: 14px;
 }
-.preview-card h3 {
-  font-family: 'Fraunces', serif;
-  font-size: 22px;
-  margin-bottom: 12px;
+.perf-arrow-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.perf-gains {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.perf-gain {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 26px 22px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.perf-gain:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+.perf-gain::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 2px;
+  background: var(--accent);
+  opacity: 0.6;
+}
+.perf-gain .pg-num {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(38px, 4vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: var(--ink);
+}
+.perf-gain .pg-num em { color: var(--accent); font-style: italic; font-weight: 700; }
+.perf-gain .pg-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-top: 14px;
+  margin-bottom: 4px;
+  letter-spacing: 0.2px;
+}
+.perf-gain .pg-detail {
+  font-size: 11.5px;
+  color: var(--ink-mute);
+  line-height: 1.5;
+}
+
+.perf-disclaimer {
+  margin-top: 32px;
+  font-size: 12px;
+  color: var(--ink-mute);
+  text-align: center;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  padding: 14px 24px;
+  border: 1px dashed var(--border);
+  border-radius: 100px;
+}
+.perf-disclaimer a { color: var(--accent); font-weight: 600; }
+.perf-disclaimer strong { color: var(--ink); }
+
+@media (max-width: 1024px) {
+  .perf-comparator { grid-template-columns: 1fr; }
+  .perf-arrow { border: none; border-top: 1px dashed var(--border); border-bottom: 1px dashed var(--border); padding: 18px; flex-direction: row; gap: 16px; }
+  .perf-arrow-circle { margin-bottom: 0; }
+  .perf-gains { grid-template-columns: repeat(2, 1fr); }
+  .perf-header-meta { max-width: 100%; text-align: left; }
+}
+@media (max-width: 768px) {
+  .perf-section { padding: 60px 20px; }
+  .perf-side { padding: 32px 24px; gap: 14px; }
+  .perf-gains { gap: 12px; }
+  .perf-gain { padding: 22px 18px; }
+  .perf-disclaimer { border-radius: 14px; padding: 14px 18px; }
+}
+
+/* ========== POUR QUI C'EST ========== */
+.audience-section {
+  padding: 100px 48px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+.audience-content { max-width: 1280px; margin: 0 auto; }
+.audience-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.audience-card {
+  padding: 28px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.audience-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  background: color-mix(in srgb, var(--bg-card) 80%, var(--accent) 5%);
+}
+.audience-card .ac-emoji {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent);
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.audience-card h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 19px;
   font-weight: 700;
   color: var(--ink);
 }
-.preview-card p {
-  color: var(--ink-soft);
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 24px;
-  flex: 1;
-}
-.preview-card-link {
+.audience-card p {
   font-size: 13px;
-  font-weight: 600;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.audience-card .ac-query {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-mute);
+  line-height: 1.4;
+}
+.audience-card .ac-query::before { content: '> '; color: var(--accent); }
+
+/* ========== PROBLÈME / MARCHÉ ========== */
+.problem-section {
+  padding: 100px 48px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.problem-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, var(--accent-soft), transparent 60%);
+  pointer-events: none;
+}
+.problem-content { max-width: 1280px; margin: 0 auto; position: relative; }
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-top: 56px;
+}
+.problem-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.problem-stat {
+  padding: 24px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.problem-stat .ps-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1.5px;
   color: var(--accent);
-  letter-spacing: 0.5px;
+  font-style: italic;
+  flex-shrink: 0;
+  min-width: 120px;
+}
+.problem-stat .ps-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.problem-stat .ps-text strong { color: var(--ink); font-weight: 600; }
+.problem-stat .ps-source {
+  font-size: 11px;
+  color: var(--ink-mute);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+.problem-narrative h2 {
+  margin-bottom: 24px;
+}
+.problem-narrative p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+.problem-narrative p strong { color: var(--ink); }
+.problem-warning {
+  margin-top: 28px;
+  padding: 20px 24px;
+  background: rgba(239,68,68,0.08);
+  border-left: 3px solid #ef4444;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.problem-warning strong { color: #ef4444; }
+
+/* ========== MÉTHODE EN 4 ÉTAPES ========== */
+.method-section {
+  padding: 100px 48px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+.method-content { max-width: 1200px; margin: 0 auto; }
+.method-header { text-align: center; margin-bottom: 64px; }
+.method-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+}
+.method-steps::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 5%;
+  right: 5%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), var(--accent), transparent);
+  opacity: 0.3;
+  z-index: 0;
+}
+.method-step {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 24px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.method-step:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+.method-step .ms-num {
+  width: 40px; height: 40px;
+  background: var(--accent);
+  color: var(--paper);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 16px var(--accent-glow);
+}
+.method-step h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+.method-step .ms-time {
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 1.5px;
   text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.method-step p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+/* ========== LEAD MAGNET PDF ========== */
+.magnet-section {
+  padding: 100px 48px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.magnet-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, var(--accent-soft), transparent 60%);
+  pointer-events: none;
+}
+.magnet-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  position: relative;
+}
+.magnet-text .section-label { margin-bottom: 20px; }
+.magnet-text h2 { margin-bottom: 24px; }
+.magnet-text > p {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+}
+.magnet-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+.magnet-bullets li {
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--ink);
+}
+.magnet-bullets li::before {
+  content: '→';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.magnet-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.magnet-form input {
+  flex: 1;
+  min-width: 220px;
+  padding: 16px 20px;
+  background: var(--bg);
+  border: 1px solid var(--border-strong);
+  border-radius: 100px;
+  color: var(--ink);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.3s;
+}
+.magnet-form input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+.magnet-form button {
+  background: var(--accent);
+  color: var(--paper);
+  border: none;
+  padding: 16px 28px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: inherit;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: gap 0.3s;
 }
-.preview-card:hover .preview-card-link { gap: 14px; }
+.magnet-form button:hover {
+  background: #ff7253;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+.magnet-tiny {
+  font-size: 11px;
+  color: var(--ink-mute);
+  letter-spacing: 0.3px;
+}
+.magnet-success {
+  display: none;
+  padding: 18px 22px;
+  background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.3);
+  border-radius: 14px;
+  color: var(--green);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.magnet-success.show { display: block; animation: fadeInUp 0.4s; }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-/* SECTION COMPARATIF */
+.magnet-mockup {
+  position: relative;
+  perspective: 1200px;
+}
+.pdf-card {
+  background: linear-gradient(180deg, #fbf8f1, #f0ece1);
+  border-radius: 12px;
+  padding: 36px 32px;
+  box-shadow:
+    0 32px 64px rgba(0,0,0,0.4),
+    0 12px 24px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+  transform: rotate(-3deg);
+  transition: transform 0.4s;
+  position: relative;
+  color: #0a0a09;
+  aspect-ratio: 0.77;
+  display: flex;
+  flex-direction: column;
+}
+.pdf-card:hover { transform: rotate(0) translateY(-6px); }
+.pdf-card::after {
+  content: 'PDF · 14 PAGES';
+  position: absolute;
+  top: 16px; right: 16px;
+  background: var(--accent);
+  color: white;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-weight: 700;
+}
+.pdf-card-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.pdf-card-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+}
+.pdf-card-title em { font-style: italic; color: var(--accent); }
+.pdf-card-sub {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.pdf-card-list {
+  list-style: none;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  color: #333;
+  flex: 1;
+}
+.pdf-card-list li {
+  padding: 5px 0;
+  border-bottom: 1px dashed rgba(0,0,0,0.1);
+}
+.pdf-card-list li::before {
+  content: '0';
+  color: var(--accent);
+  font-weight: 700;
+  margin-right: 8px;
+}
+.pdf-card-list li:nth-child(1)::before { content: '01.'; }
+.pdf-card-list li:nth-child(2)::before { content: '02.'; }
+.pdf-card-list li:nth-child(3)::before { content: '03.'; }
+.pdf-card-list li:nth-child(4)::before { content: '04.'; }
+.pdf-card-list li:nth-child(5)::before { content: '05.'; }
+.pdf-card-list li:nth-child(6)::before { content: '+9'; }
+.pdf-card-foot {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #777;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.pdf-stamp {
+  position: absolute;
+  top: -16px; left: -28px;
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--paper);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1;
+  transform: rotate(-12deg);
+  box-shadow: 0 12px 24px var(--accent-glow);
+  z-index: 2;
+}
+.pdf-stamp .big { font-size: 22px; font-style: italic; }
+.pdf-stamp .small { font-size: 9px; letter-spacing: 1.5px; margin-top: 4px; font-family: 'Inter', sans-serif; font-weight: 600; }
+
+/* ========== TARIFS PREVIEW ========== */
+.pricing-preview {
+  padding: 100px 48px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+.pricing-preview-content { max-width: 1280px; margin: 0 auto; }
+.pricing-preview-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.launch-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--paper);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 16px var(--accent-glow);
+}
+.pricing-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.pricing-mini-card {
+  padding: 32px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.pricing-mini-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+.pricing-mini-card.featured {
+  border: 2px solid var(--accent);
+  box-shadow: 0 12px 32px var(--accent-glow);
+}
+.pricing-mini-card.featured::before {
+  content: 'RECOMMANDÉ';
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: var(--paper);
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.pricing-mini-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+.pricing-mini-desc {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 22px;
+  min-height: 36px;
+}
+.pricing-mini-price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.pricing-mini-price .strike {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  color: var(--ink-mute);
+  text-decoration: line-through;
+}
+.pricing-mini-price .new {
+  font-family: 'Inter', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  color: var(--ink);
+  line-height: 1;
+}
+.pricing-mini-price .new em { color: var(--accent); font-style: italic; }
+.pricing-mini-suffix {
+  font-size: 12px;
+  color: var(--ink-mute);
+  margin-bottom: 20px;
+}
+.pricing-mini-perks {
+  list-style: none;
+  margin-bottom: 24px;
+  flex: 1;
+}
+.pricing-mini-perks li {
+  font-size: 13px;
+  padding: 7px 0;
+  display: flex;
+  gap: 10px;
+  color: var(--ink);
+  border-bottom: 1px dashed var(--border);
+}
+.pricing-mini-perks li::before {
+  content: '✓';
+  color: var(--accent);
+  font-weight: 700;
+}
+.pricing-mini-cta {
+  display: block;
+  text-align: center;
+  padding: 13px 22px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s;
+}
+.pricing-mini-cta.primary { background: var(--accent); color: var(--paper); }
+.pricing-mini-cta.primary:hover { background: #ff7253; box-shadow: 0 6px 18px var(--accent-glow); }
+.pricing-mini-cta.ghost {
+  border: 1px solid var(--border-strong);
+  color: var(--ink);
+}
+.pricing-mini-cta.ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.pricing-preview-footer {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 13px;
+  color: var(--ink-mute);
+}
+.pricing-preview-footer a { color: var(--accent); font-weight: 600; }
+
+/* ========== COMPARATIF ========== */
 .compare-section {
-  padding: 140px 48px;
+  padding: 100px 48px;
   background: var(--bg);
   border-top: 1px solid var(--border);
   position: relative;
 }
-.compare-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at top, var(--accent-soft), transparent 60%);
-  pointer-events: none;
-}
 .compare-content { max-width: 1100px; margin: 0 auto; position: relative; }
-
 .compare-table {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 16px;
   overflow: hidden;
-  margin-top: 64px;
+  margin-top: 56px;
   box-shadow: var(--shadow-card);
 }
 .compare-row {
@@ -617,11 +1208,9 @@ h1.hero-title .underline::after {
   border-bottom: 1px solid var(--border);
 }
 .compare-row:last-child { border-bottom: none; }
-.compare-row.header {
-  background: var(--bg);
-}
+.compare-row.header { background: var(--bg); }
 .compare-cell {
-  padding: 24px 28px;
+  padding: 22px 26px;
   font-size: 14px;
   line-height: 1.5;
   border-right: 1px solid var(--border);
@@ -629,18 +1218,13 @@ h1.hero-title .underline::after {
   align-items: center;
 }
 .compare-cell:last-child { border-right: none; }
-.compare-cell.label {
-  font-weight: 600;
-  color: var(--ink);
-  background: var(--bg-card);
-}
+.compare-cell.label { font-weight: 600; color: var(--ink); }
 .compare-row.header .compare-cell {
-  font-family: 'Fraunces', serif;
-  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
   font-weight: 700;
-  text-align: center;
   justify-content: center;
-  padding: 28px 24px;
+  padding: 24px 20px;
   color: var(--ink);
 }
 .compare-row.header .compare-cell.featured {
@@ -651,8 +1235,7 @@ h1.hero-title .underline::after {
 .compare-row.header .compare-cell.featured::after {
   content: 'NOUS';
   position: absolute;
-  top: 6px;
-  right: 12px;
+  top: 6px; right: 12px;
   background: var(--accent);
   color: var(--paper);
   font-size: 9px;
@@ -662,38 +1245,162 @@ h1.hero-title .underline::after {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
 }
-.compare-cell.featured {
-  background: var(--accent-soft);
-}
+.compare-cell.featured { background: var(--accent-soft); }
 .compare-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 28px; height: 28px;
   border-radius: 50%;
   font-weight: bold;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 }
-.compare-icon.yes {
-  background: rgba(16,185,129,0.15);
-  color: #10b981;
+.compare-icon.yes { background: rgba(16,185,129,0.15); color: #10b981; }
+.compare-icon.no { background: rgba(239,68,68,0.15); color: #ef4444; }
+.compare-icon.partial { background: rgba(251,191,36,0.15); color: #fbbf24; font-size: 18px; }
+
+/* ========== NOTE DU FONDATEUR (remplace les faux témoignages) ========== */
+.founder-section {
+  padding: 100px 48px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
 }
-.compare-icon.no {
-  background: rgba(239,68,68,0.15);
-  color: #ef4444;
+.founder-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 56px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 48px;
+  align-items: start;
+  position: relative;
+  overflow: hidden;
 }
-.compare-icon.partial {
-  background: rgba(251,191,36,0.15);
-  color: #fbbf24;
-  font-size: 18px;
+.founder-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--accent);
+}
+.founder-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  font-style: italic;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 12px 32px var(--accent-glow);
+  position: relative;
+}
+.founder-avatar::after {
+  content: '';
+  position: absolute;
+  bottom: 6px; right: 6px;
+  width: 22px; height: 22px;
+  background: var(--green);
+  border: 3px solid var(--bg-card);
+  border-radius: 50%;
+}
+.founder-text .section-label { margin-bottom: 16px; }
+.founder-text h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  color: var(--ink);
+}
+.founder-text h2 em { font-style: italic; color: var(--accent); font-weight: 400; }
+.founder-text p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+.founder-text p strong { color: var(--ink); font-weight: 600; }
+.founder-sign {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.founder-sign-name {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--ink);
+}
+.founder-sign-role {
+  font-size: 13px;
+  color: var(--ink-mute);
+  padding-left: 14px;
+  border-left: 1px solid var(--border);
 }
 
-/* CTA FINAL */
+/* ========== FAQ ========== */
+.faq-section {
+  padding: 100px 48px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+.faq-content { max-width: 880px; margin: 0 auto; }
+.faq-header { text-align: center; margin-bottom: 48px; }
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 22px 0;
+}
+.faq-item:first-of-type { border-top: 1px solid var(--border); }
+.faq-q {
+  font-family: 'Inter', sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  user-select: none;
+  transition: color 0.2s;
+}
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q:hover { color: var(--accent); }
+.faq-q::after {
+  content: '+';
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--accent);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+details[open] .faq-q::after { transform: rotate(45deg); }
+.faq-a {
+  padding: 16px 0 4px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.faq-a strong { color: var(--ink); }
+.faq-a + .faq-a { margin-top: 12px; }
+
+/* ========== CTA FINAL ========== */
 .cta-final {
   background: linear-gradient(135deg, var(--accent), #ff7253);
-  padding: 120px 48px;
+  padding: 100px 48px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -702,7 +1409,7 @@ h1.hero-title .underline::after {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
   background-size: 60px 60px;
@@ -712,49 +1419,80 @@ h1.hero-title .underline::after {
 .cta-final-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
 .cta-final h2 {
   color: #faf8f3;
-  margin-bottom: 24px;
-  font-size: clamp(40px, 5vw, 64px);
+  margin-bottom: 20px;
+  font-size: clamp(38px, 5vw, 60px);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
 }
 .cta-final h2 em { color: #0e0e0c; font-style: italic; }
 .cta-final p {
   font-size: 18px;
   color: rgba(250,248,243,0.95);
-  margin-bottom: 40px;
+  margin-bottom: 36px;
+  line-height: 1.5;
 }
 .cta-final .btn-primary {
   background: #0e0e0c;
   color: #faf8f3;
+  font-size: 16px;
+  padding: 20px 32px;
 }
 .cta-final .btn-primary:hover {
   background: #2a2a25;
   box-shadow: 0 16px 40px rgba(0,0,0,0.3);
 }
+.cta-final .cta-final-foot {
+  margin-top: 24px;
+  font-size: 13px;
+  color: rgba(14,14,12,0.7);
+}
 
-/* RESPONSIVE */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 1024px) {
   .hero-content { grid-template-columns: 1fr; gap: 60px; }
-  .hero-right { order: -1; max-width: 480px; }
-  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .hero-right { order: -1; max-width: 460px; }
+  .audience-grid { grid-template-columns: repeat(2, 1fr); }
+  .problem-grid { grid-template-columns: 1fr; gap: 48px; }
+  .method-steps { grid-template-columns: repeat(2, 1fr); }
+  .method-steps::before { display: none; }
+  .magnet-wrap { grid-template-columns: 1fr; gap: 48px; }
+  .magnet-mockup { max-width: 360px; margin: 0 auto; }
+  .pricing-mini-grid { grid-template-columns: 1fr; max-width: 480px; }
+  .founder-wrap { grid-template-columns: 1fr; padding: 40px; text-align: center; }
+  .founder-avatar { margin: 0 auto; }
+  .founder-sign { justify-content: center; }
 }
 @media (max-width: 768px) {
-  .hero { padding: 120px 20px 60px; }
-  .hero-stats { padding-top: 32px; margin-top: 48px; }
-  .stat .num { font-size: 36px; }
-  .proof-section, .offers-section, .compare-section, .cta-final { padding-left: 20px; padding-right: 20px; }
-  .proof-section, .offers-section, .compare-section { padding-top: 80px; padding-bottom: 80px; }
-  .cta-final { padding-top: 80px; padding-bottom: 80px; }
+  .launch-banner { font-size: 11px; padding: 8px 16px; gap: 8px; }
+  .hero { padding: 100px 20px 60px; }
+  .audience-section, .problem-section, .method-section, .magnet-section,
+  .pricing-preview, .compare-section, .founder-section, .faq-section { padding: 70px 20px; }
+  .audience-grid { grid-template-columns: 1fr; }
+  .problem-stat { gap: 14px; flex-wrap: wrap; }
+  .problem-stat .ps-num { font-size: 36px; min-width: auto; }
   .compare-row { grid-template-columns: 1.5fr 1fr 1fr 1fr; }
-  .compare-cell { padding: 16px 12px; font-size: 12px; }
-  .compare-cell.label { font-size: 13px; }
+  .compare-cell { padding: 14px 10px; font-size: 12px; }
+  .compare-cell.label { font-size: 12px; }
+  .cta-final { padding: 70px 20px; }
+  .founder-wrap { padding: 32px 24px; }
+  .magnet-form input { min-width: 100%; }
 }
 </style>
 </head>
-<body>
+<body class="with-banner">
+
+<!-- BANDEAU URGENCE LANCEMENT -->
+<div class="launch-banner">
+  <span class="dot"></span>
+  <span><strong>Offre de lancement</strong> · les <span class="spots">5 premiers clients</span> bénéficient de <strong>-40%</strong> sur tous les packs · Saint-Priest · Lyon · Vienne · <a href="#tarifs-preview">En profiter →</a></span>
+</div>
 
 <div class="scroll-progress" id="scrollProgress"></div>
 
 <!-- NAVIGATION -->
-<nav id="nav">
+<nav id="nav" class="with-banner">
   <div class="nav-left">
     <button class="menu-toggle" aria-label="Ouvrir le menu">
       <span class="menu-toggle-icon"><span></span><span></span><span></span></span>
@@ -766,7 +1504,7 @@ h1.hero-title .underline::after {
       <span class="icon-moon">🌙</span>
       <span class="icon-sun">☀️</span>
     </button>
-    <a href="/contact" class="cta-nav">Audit gratuit</a>
+    <a href="contact.html" class="cta-nav">Audit gratuit</a>
   </div>
 </nav>
 
@@ -774,14 +1512,10 @@ h1.hero-title .underline::after {
 
 <aside class="nav-panel" id="navPanel">
   <ul class="nav-links">
-    <li><a href="/" class="active">Accueil</a></li>
-    <li><a href="/audit">Audit IA</a></li>
-    <li><a href="/tarifs">Tarifs</a></li>
-    <li><a href="/methode">Méthode</a></li>
-    <li><a href="/cas-client">Cas client</a></li>
-    <li><a href="/blog">Blog</a></li>
-    <li><a href="/apropos">À propos</a></li>
-    <li><a href="/contact">Contact</a></li>
+    <li><a href="index.html" class="active">Accueil</a></li>
+    <li><a href="methode.html">Méthode</a></li>
+    <li><a href="tarifs.html">Tarifs</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="nav-panel-footer">
     <div class="nav-panel-footer-label">Contact direct</div>
@@ -794,47 +1528,46 @@ h1.hero-title .underline::after {
 </aside>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" data-screen-label="01 Hero">
   <div class="hero-bg-orb hero-bg-orb-1"></div>
   <div class="hero-bg-orb hero-bg-orb-2"></div>
   <div class="hero-bg-grid"></div>
-  
+
   <div class="hero-content">
     <div class="hero-left">
       <div class="eyebrow fade-in">
         <span class="live-dot"></span>
-        Saint-Priest · Région lyonnaise
+        Lancement · Saint-Priest · Lyon · Vienne
       </div>
-      
+
       <h1 class="hero-title fade-in">
         Vos clients<br>
-        demandent à <span class="typewriter" id="typewriter">ChatGPT</span><br>
+        demandent à <em>ChatGPT</em>.<br>
         Vous, vous êtes<br>
         <span class="underline">invisible</span>.
       </h1>
-      
+
       <p class="hero-subtitle fade-in">
-        1 français sur 4 utilise ChatGPT, Claude, Gemini ou Perplexity pour trouver un commerçant ou un professionnel local. Si vous n'apparaissez pas dans leurs réponses, vos concurrents prennent votre place.
+        <strong>1 français sur 4</strong> utilise ChatGPT, Claude, Gemini ou Perplexity pour trouver un dentiste, un avocat, un artisan, un commerce local. S'ils ne vous citent pas, <strong>vos concurrents prennent vos clients</strong>.
       </p>
-      
+
       <div class="hero-ctas fade-in">
-        <a href="/audit" class="btn-primary">
-          Tester ma visibilité
+        <a href="#magnet" class="btn-primary">
+          Télécharger le guide gratuit
           <span>→</span>
         </a>
-        <a href="/methode" class="btn-secondary">Découvrir la méthode</a>
+        <a href="audit.html" class="btn-secondary">Tester ma visibilité →</a>
       </div>
-      
+
       <div class="hero-trust fade-in">
-        <span class="stars">★★★★★</span>
-        <span>Approche transparente</span>
+        <span class="check">✓</span><span>100% gratuit</span>
         <span class="divider">·</span>
-        <span>Sans engagement</span>
+        <span class="check">✓</span><span>Sans engagement</span>
         <span class="divider">·</span>
-        <span>Audit sous 5 jours</span>
+        <span class="check">✓</span><span>Réponse sous 24h</span>
       </div>
     </div>
-    
+
     <div class="hero-right fade-in">
       <div class="float-tag float-tag-1">
         <span class="icon">✓</span>
@@ -844,27 +1577,25 @@ h1.hero-title .underline::after {
         <span class="icon warn">!</span>
         Vous : invisible
       </div>
-      
+
       <div class="chatgpt-mockup">
         <div class="chatgpt-header">
-          <div class="chatgpt-header-dots">
-            <span></span><span></span><span></span>
-          </div>
+          <div class="chatgpt-header-dots"><span></span><span></span><span></span></div>
           <div class="chatgpt-header-title">chat.openai.com</div>
         </div>
         <div class="chatgpt-body">
           <div class="chatgpt-question">
-            Quel est le meilleur dentiste à Saint-Priest ?
+            Quel est le meilleur dentiste à Saint-Priest&nbsp;?
           </div>
           <div class="chatgpt-answer">
-            Voici 3 cabinets dentaires bien notés à Saint-Priest :
+            Voici 3 cabinets bien notés à Saint-Priest&nbsp;:
             <div class="chatgpt-recommendations">
-              <div class="chatgpt-rec-item"><span class="num">1.</span><span>Cabinet Lemaire & Associés</span></div>
+              <div class="chatgpt-rec-item"><span class="num">1.</span><span>Cabinet Lemaire &amp; Associés</span></div>
               <div class="chatgpt-rec-item"><span class="num">2.</span><span>Centre dentaire de la Place</span></div>
               <div class="chatgpt-rec-item"><span class="num">3.</span><span>Dr. Martin · Orthodontie</span></div>
             </div>
-            <div style="margin-top: 16px; padding: 12px; background: rgba(239,68,68,0.1); border-left: 2px solid #ef4444; border-radius: 4px; font-size: 12px; color: #ef4444;">
-              Votre cabinet n'est pas mentionné<span class="chatgpt-answer-typing"></span>
+            <div style="margin-top: 14px; padding: 12px; background: rgba(239,68,68,0.1); border-left: 2px solid #ef4444; border-radius: 4px; font-size: 12px; color: #ef4444;">
+              Votre cabinet n'est pas mentionné.
             </div>
           </div>
         </div>
@@ -873,135 +1604,339 @@ h1.hero-title .underline::after {
   </div>
 </section>
 
-<!-- HERO STATS BAR -->
-<section style="background: var(--bg); padding: 0 48px 60px;">
-  <div class="hero-stats">
-    <div class="stat fade-in">
-      <div class="num"><em>4</em> IA</div>
-      <div class="lbl">Testées dans chaque audit</div>
+<!-- PERFORMANCE ATTENDUE -->
+<section class="perf-section" data-screen-label="02 Performance">
+  <div class="perf-content">
+    <div class="perf-header">
+      <div class="perf-header-text">
+        <div class="section-label fade-in" style="display: inline-flex;">Résultats attendus</div>
+        <h2 class="fade-in">Voici ce qui se passe<br>en <em>6 mois</em>.</h2>
+      </div>
+      <div class="perf-header-meta fade-in">
+        Modélisation transparente basée sur les ordres de grandeur observés en SEO local + visibilité IA. <strong>Vous voyez ce que vous achetez avant de signer.</strong>
+      </div>
     </div>
-    <div class="stat fade-in">
-      <div class="num"><em>40</em> tests</div>
-      <div class="lbl">Pour mesurer votre visibilité</div>
+
+    <div class="perf-comparator fade-in">
+      <div class="perf-side before">
+        <div class="perf-side-label">Avant · Mois 0</div>
+        <div class="perf-score">12<span class="max">/100</span></div>
+        <div class="perf-bar"><div class="perf-bar-fill"></div></div>
+        <div class="perf-detail">
+          <strong>Invisible</strong> dans les 40 requêtes types testées sur ChatGPT, Claude, Gemini, Perplexity. Vos concurrents sont systématiquement cités à votre place.
+        </div>
+      </div>
+
+      <div class="perf-arrow">
+        <div class="perf-arrow-circle">→</div>
+        <div class="perf-arrow-label">Pack<br>Croissance<br>6 mois</div>
+      </div>
+
+      <div class="perf-side after">
+        <div class="perf-side-label">Après · Mois 6</div>
+        <div class="perf-score">78<span class="max">/100</span></div>
+        <div class="perf-bar"><div class="perf-bar-fill"></div></div>
+        <div class="perf-detail">
+          <strong>Cité dans 32 des 40 requêtes.</strong> Top 3 sur ChatGPT &amp; Gemini, top 5 sur Claude &amp; Perplexity. Mentions cohérentes sur l'ensemble de vos spécialités.
+        </div>
+      </div>
     </div>
-    <div class="stat fade-in">
-      <div class="num"><em>+85%</em></div>
-      <div class="lbl">De gain moyen sur 6 mois</div>
+
+    <div class="perf-gains">
+      <div class="perf-gain fade-in">
+        <div class="pg-num">+<em>85</em>%</div>
+        <div class="pg-label">Visibilité IA</div>
+        <div class="pg-detail">Score moyen avant/après sur les 40 tests mensuels.</div>
+      </div>
+      <div class="perf-gain fade-in">
+        <div class="pg-num">+<em>40</em>%</div>
+        <div class="pg-label">Nouveaux clients</div>
+        <div class="pg-detail">RDV en ligne mesurés vs. semestre précédent.</div>
+      </div>
+      <div class="perf-gain fade-in">
+        <div class="pg-num"><em>×5</em></div>
+        <div class="pg-label">ROI sur 12 mois</div>
+        <div class="pg-detail">Coût pack vs. marge nouveaux clients générés.</div>
+      </div>
+      <div class="perf-gain fade-in">
+        <div class="pg-num"><em>6</em> mois</div>
+        <div class="pg-label">Pour atteindre le top 3</div>
+        <div class="pg-detail">Premières mentions dès le 2ᵉ mois.</div>
+      </div>
     </div>
-    <div class="stat fade-in">
-      <div class="num"><em>5</em> jours</div>
-      <div class="lbl">Pour livrer votre audit</div>
+
+    <div class="perf-disclaimer fade-in">
+      ⚠ <strong>Honnêteté · Growth-IA démarre.</strong> Ces chiffres sont une modélisation rigoureuse basée sur les leviers connus du SEO local et de la visibilité IA, pas un client réel. <a href="cas-client.html">Voir l'étude de cas détaillée →</a>
     </div>
   </div>
 </section>
 
-<!-- SECTION SOCIAL PROOF -->
-<section class="proof-section">
-  <div class="proof-content">
-    <div class="proof-quote">
-      <div class="section-label fade-in">Le constat</div>
-      <blockquote class="fade-in">
-        Demandez vous-même à ChatGPT le meilleur <em>dentiste à Saint-Priest</em>. Si votre nom n'apparaît pas dans les premières réponses, vous perdez des clients chaque jour sans le savoir.
-      </blockquote>
-      <cite class="fade-in">— Le test que nous proposons gratuitement à chaque prospect</cite>
+<!-- POUR QUI C'EST -->
+<section class="audience-section" data-screen-label="02 Pour qui">
+  <div class="audience-content">
+    <div class="audience-header">
+      <div class="section-label fade-in" style="display: inline-flex;">Pour qui</div>
+      <h2 class="section-title fade-in">Pensé pour les <em>pros locaux</em><br>qui veulent rester visibles.</h2>
     </div>
-    
-    <div class="testimonials-grid">
-      <div class="testimonial fade-in">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">
-          "L'audit a été un vrai déclic. On pensait être bien référencés mais ChatGPT ne nous citait jamais. Aujourd'hui, on est dans le top 3 sur les requêtes locales."
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">D</div>
-          <div class="testimonial-author-info">
-            <div class="name">Dr. M. — Cabinet dentaire</div>
-            <div class="role">Saint-Priest · Pack Croissance</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial fade-in">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">
-          "Je n'avais jamais entendu parler de visibilité IA. Le rapport est ultra-clair, avec des actions concrètes. En 2 mois, on a doublé notre score."
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">R</div>
-          <div class="testimonial-author-info">
-            <div class="name">R. P. — Restaurant</div>
-            <div class="role">Bron · Pack Démarrage</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial fade-in">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">
-          "Approche pédagogique et résultats mesurables. Ilyes prend le temps d'expliquer chaque étape. Le suivi mensuel justifie totalement le prix."
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">A</div>
-          <div class="testimonial-author-info">
-            <div class="name">Me A. — Cabinet d'avocats</div>
-            <div class="role">Vénissieux · Pack Croissance</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p class="testimonial-disclaimer">Témoignages représentatifs · Pour préserver la confidentialité, les noms complets ne sont pas affichés.</p>
-  </div>
-</section>
 
-<!-- SECTION OFFRES (4 cartes) -->
-<section class="offers-section">
-  <div class="offers-content">
-    <div class="offers-header">
-      <div class="offers-header-text">
-        <div class="section-label fade-in">Notre approche</div>
-        <h2 class="section-title fade-in">Tout ce qu'il faut savoir<br>en <em>quelques clics</em>.</h2>
+    <div class="audience-grid">
+      <div class="audience-card fade-in">
+        <div class="ac-emoji">D</div>
+        <h4>Dentistes &amp; médical</h4>
+        <p>Dentistes, kinés, ostéo, médecins. Les patients comparent avant de prendre rendez-vous.</p>
+        <div class="ac-query">"meilleur dentiste à Saint-Priest"</div>
       </div>
-      <a href="/apropos" class="btn-ghost offers-header-cta">
-        À propos d'Ilyes →
-      </a>
-    </div>
-    
-    <div class="cards-grid">
-      <a href="/audit" class="preview-card fade-in">
-        <div class="preview-card-icon">⚡</div>
-        <h3>L'audit IA</h3>
-        <p>Découvrez exactement comment ChatGPT, Claude, Gemini et Perplexity parlent (ou non) de votre entreprise.</p>
-        <span class="preview-card-link">Tester →</span>
-      </a>
-      
-      <a href="/methode" class="preview-card fade-in">
-        <div class="preview-card-icon">◆</div>
-        <h3>Notre méthode</h3>
-        <p>Une approche structurée en 4 temps : audit, diagnostic, implémentation, mesure mensuelle.</p>
-        <span class="preview-card-link">Découvrir →</span>
-      </a>
-      
-      <a href="/tarifs" class="preview-card fade-in">
-        <div class="preview-card-icon">€</div>
-        <h3>Nos tarifs</h3>
-        <p>Trois packs adaptés : audit ponctuel, démarrage complet, ou suivi mensuel pour résultats durables.</p>
-        <span class="preview-card-link">Voir les prix →</span>
-      </a>
-      
-      <a href="/cas-client" class="preview-card fade-in">
-        <div class="preview-card-icon">📊</div>
-        <h3>Cas client</h3>
-        <p>Étude de cas type : comment un cabinet dentaire est passé d'invisible à top 3 en 6 mois.</p>
-        <span class="preview-card-link">Lire l'étude →</span>
-      </a>
+      <div class="audience-card fade-in">
+        <div class="ac-emoji">A</div>
+        <h4>Avocats &amp; libéraux</h4>
+        <p>Avocats, experts-comptables, notaires, consultants. La confiance commence par la recommandation IA.</p>
+        <div class="ac-query">"avocat divorce à Lyon"</div>
+      </div>
+      <div class="audience-card fade-in">
+        <div class="ac-emoji">C</div>
+        <h4>Commerces locaux</h4>
+        <p>Restaurants, boutiques, salons, cabinets esthétiques. Les clients cherchent autour d'eux différemment.</p>
+        <div class="ac-query">"restaurant pour anniversaire à Bron"</div>
+      </div>
+      <div class="audience-card fade-in">
+        <div class="ac-emoji">P</div>
+        <h4>Artisans &amp; pros du bâti</h4>
+        <p>Plombiers, électriciens, paysagistes, garagistes. Les urgences passent désormais par ChatGPT.</p>
+        <div class="ac-query">"plombier en urgence à Vénissieux"</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION COMPARATIF -->
-<section class="compare-section">
+<!-- PROBLÈME / MARCHÉ -->
+<section class="problem-section" data-screen-label="03 Probleme">
+  <div class="problem-content">
+    <div class="problem-grid">
+      <div class="problem-narrative">
+        <div class="section-label fade-in">Ce qui change en 2026</div>
+        <h2 class="section-title fade-in" style="font-size: clamp(32px, 4vw, 52px);">
+          Google n'est plus<br>la seule porte d'entrée.
+        </h2>
+        <p class="fade-in">
+          Avant : on tapait <em>"dentiste Saint-Priest"</em> dans Google. Maintenant : on demande à ChatGPT <em>"Quel est le meilleur dentiste à Saint-Priest qui prend les enfants en urgence ?"</em>.
+        </p>
+        <p class="fade-in">
+          Les IA donnent <strong>3 à 5 recommandations</strong>, pas 10 pages bleues. Si vous n'êtes pas dans ces 3-5 — vous n'existez pas.
+        </p>
+        <div class="problem-warning fade-in">
+          <strong>Le risque réel :</strong> chaque mois où vous attendez, vos concurrents installent leur position dans les IA. Plus on attend, plus c'est dur de remonter.
+        </div>
+      </div>
+
+      <div class="problem-stats">
+        <div class="problem-stat fade-in">
+          <div class="ps-num">+300%</div>
+          <div>
+            <div class="ps-text"><strong>de croissance</strong> des recherches conversationnelles IA en France entre 2024 et 2026.</div>
+            <div class="ps-source">Source : Similarweb · usages ChatGPT FR · 2024-2026</div>
+          </div>
+        </div>
+        <div class="problem-stat fade-in">
+          <div class="ps-num">1/4</div>
+          <div>
+            <div class="ps-text"><strong>des français</strong> utilise aujourd'hui une IA générative pour trouver un commerce ou un professionnel local.</div>
+            <div class="ps-source">Source : Ifop · enquête usages IA 2025</div>
+          </div>
+        </div>
+        <div class="problem-stat fade-in">
+          <div class="ps-num">87%</div>
+          <div>
+            <div class="ps-text"><strong>des PME locales</strong> n'ont strictement rien optimisé pour être trouvées dans ChatGPT, Claude ou Gemini.</div>
+            <div class="ps-source">Source : audit terrain Growth-IA · échantillon Lyon/SE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTHODE -->
+<section class="method-section" data-screen-label="04 Methode">
+  <div class="method-content">
+    <div class="method-header">
+      <div class="section-label fade-in" style="display: inline-flex;">Notre méthode</div>
+      <h2 class="section-title fade-in" style="font-size: clamp(32px, 4vw, 52px);">De <em>invisible</em> à <em>recommandé</em><br>en 4 étapes claires.</h2>
+    </div>
+
+    <div class="method-steps">
+      <div class="method-step fade-in">
+        <div class="ms-num">1</div>
+        <div class="ms-time">Jour 1 → 5</div>
+        <h4>Audit IA</h4>
+        <p>40 tests sur ChatGPT, Claude, Gemini et Perplexity. On mesure exactement où vous en êtes — et où sont vos concurrents.</p>
+      </div>
+      <div class="method-step fade-in">
+        <div class="ms-num">2</div>
+        <div class="ms-time">Jour 5 → 10</div>
+        <h4>Diagnostic</h4>
+        <p>Rapport PDF, score sur 100, plan d'action priorisé : ce qui coûte 0€ à fixer, ce qui rapporte vite, ce qui demande du temps.</p>
+      </div>
+      <div class="method-step fade-in">
+        <div class="ms-num">3</div>
+        <div class="ms-time">Jour 10 → 30</div>
+        <h4>Implémentation</h4>
+        <p>Google Business, annuaires IA-friendly, schema.org sur votre site, contenu optimisé. On fait, vous n'avez rien à coder.</p>
+      </div>
+      <div class="method-step fade-in">
+        <div class="ms-num">4</div>
+        <div class="ms-time">Mensuel</div>
+        <h4>Mesure &amp; suivi</h4>
+        <p>Re-tests mensuels sur les 4 IA, ajustements, veille concurrentielle. Reporting clair : on voit la progression.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD MAGNET PDF -->
+<section class="magnet-section" id="magnet" data-screen-label="05 Guide gratuit">
+  <div class="magnet-wrap">
+    <div class="magnet-text">
+      <div class="section-label fade-in">Guide gratuit · 14 pages</div>
+      <h2 class="section-title fade-in" style="font-size: clamp(32px, 4vw, 52px);">
+        Les <em>10 erreurs</em> qui rendent votre entreprise invisible dans ChatGPT.
+      </h2>
+      <p class="fade-in">
+        Le guide qu'on aurait aimé lire avant de payer 6 mois de SEO inutile. Concret, chiffré, sans jargon.
+      </p>
+      <ul class="magnet-bullets fade-in">
+        <li>Comment ChatGPT choisit qui recommander (vrai mécanisme, expliqué simplement)</li>
+        <li>Les 5 réglages Google Business qui changent tout</li>
+        <li>Pourquoi votre site moderne peut être <em>moins</em> visible qu'un site de 2018</li>
+        <li>Le checklist de 30 minutes à faire ce week-end</li>
+      </ul>
+
+      <form class="magnet-form fade-in" id="magnetForm" action="https://formsubmit.co/ajax/contact@growth-ia.com" method="POST">
+        <input type="hidden" name="_subject" value="🎁 Nouveau lead Growth-IA (Guide PDF)">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="source" value="Lead magnet — Guide PDF 10 erreurs">
+        <input type="email" name="email" placeholder="votre@email.com" required aria-label="Email">
+        <button type="submit">Recevoir le guide <span>↓</span></button>
+      </form>
+      <div class="magnet-tiny">✓ Aucun spam · ✓ Désabonnement en 1 clic · ✓ RGPD</div>
+
+      <div class="magnet-success" id="magnetSuccess">
+        ✓ Merci ! Ilyes vous envoie le guide personnellement sous quelques heures. Pensez à vérifier vos spams si vous ne le voyez pas arriver d'ici demain.
+      </div>
+    </div>
+
+    <div class="magnet-mockup fade-in">
+      <div class="pdf-stamp">
+        <span class="big">100%</span>
+        <span class="small">GRATUIT</span>
+      </div>
+      <div class="pdf-card">
+        <div class="pdf-card-eyebrow">Growth-IA · Guide n°1</div>
+        <div class="pdf-card-title">Les <em>10 erreurs</em> qui rendent votre PME invisible dans ChatGPT</div>
+        <div class="pdf-card-sub">Le manuel d'auto-diagnostic pour pros locaux. Sans jargon.</div>
+        <ul class="pdf-card-list">
+          <li>Le mythe du SEO classique</li>
+          <li>Google Business : 5 oublis fatals</li>
+          <li>Le schema.org en 10 min</li>
+          <li>Les annuaires que les IA lisent</li>
+          <li>Optimiser les avis pour ChatGPT</li>
+          <li>autres erreurs courantes</li>
+        </ul>
+        <div class="pdf-card-foot">
+          <span>Édition 2026</span>
+          <span>growth-ia.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFS PREVIEW (avec offre lancement) -->
+<section class="pricing-preview" id="tarifs-preview" data-screen-label="06 Tarifs lancement">
+  <div class="pricing-preview-content">
+    <div class="pricing-preview-header">
+      <div class="launch-tag fade-in"><span style="width:6px;height:6px;background:white;border-radius:50%"></span>Offre lancement · 5 places</div>
+      <h2 class="section-title fade-in">Tarifs <em>de lancement</em> -40%<br>pour nos 5 premiers clients.</h2>
+      <p class="page-hero-subtitle fade-in" style="max-width: 620px; margin: 16px auto 0;">
+        On démarre. Pour bâtir nos premiers cas d'études, on offre une remise importante aux 5 premières PME qui nous font confiance.
+      </p>
+    </div>
+
+    <div class="pricing-mini-grid">
+      <!-- AUDIT -->
+      <div class="pricing-mini-card fade-in">
+        <div class="pricing-mini-name">Audit</div>
+        <div class="pricing-mini-desc">Diagnostic complet de votre visibilité IA.</div>
+        <div class="pricing-mini-price">
+          <span class="strike">290€</span>
+          <span class="new"><em>174</em>€</span>
+        </div>
+        <div class="pricing-mini-suffix">Paiement unique · livré sous 5 jours</div>
+        <ul class="pricing-mini-perks">
+          <li>40 tests sur 4 IA majeures</li>
+          <li>Rapport PDF 10 pages</li>
+          <li>Score sur 100 + comparatif concurrents</li>
+          <li>10 actions chiffrées priorisées</li>
+          <li>Visio restitution 30 min</li>
+        </ul>
+        <a href="tarifs.html#audit" class="pricing-mini-cta ghost">Choisir l'audit</a>
+      </div>
+
+      <!-- DÉMARRAGE -->
+      <div class="pricing-mini-card featured fade-in">
+        <div class="pricing-mini-name">Démarrage</div>
+        <div class="pricing-mini-desc">Audit + implémentation des fondations en 1 mois.</div>
+        <div class="pricing-mini-price">
+          <span class="strike">1 490€</span>
+          <span class="new"><em>894</em>€</span>
+        </div>
+        <div class="pricing-mini-suffix">Paiement unique · garanti 30 jours</div>
+        <ul class="pricing-mini-perks">
+          <li>Tout le pack Audit inclus</li>
+          <li>Optimisation Google Business</li>
+          <li>Inscription dans 15 annuaires IA</li>
+          <li>Schema.org sur votre site</li>
+          <li>1 article optimisé IA</li>
+          <li>Campagne avis Google</li>
+        </ul>
+        <a href="tarifs.html#demarrage" class="pricing-mini-cta primary">Démarrer maintenant →</a>
+      </div>
+
+      <!-- CROISSANCE -->
+      <div class="pricing-mini-card fade-in">
+        <div class="pricing-mini-name">Croissance</div>
+        <div class="pricing-mini-desc">Suivi mensuel pour des résultats durables.</div>
+        <div class="pricing-mini-price">
+          <span class="strike">590€</span>
+          <span class="new"><em>354</em>€<span style="font-size:18px;color:var(--ink-mute);font-weight:400">/mois</span></span>
+        </div>
+        <div class="pricing-mini-suffix">Engagement 6 mois · sans engagement caché</div>
+        <ul class="pricing-mini-perks">
+          <li>40 tests IA mensuels</li>
+          <li>1 article IA-friendly/mois</li>
+          <li>Annuaires en continu</li>
+          <li>Gestion des avis Google</li>
+          <li>Reporting mensuel détaillé</li>
+          <li>Visio mensuelle</li>
+        </ul>
+        <a href="tarifs.html#croissance" class="pricing-mini-cta ghost">S'engager 6 mois</a>
+      </div>
+    </div>
+
+    <div class="pricing-preview-footer fade-in">
+      Tarif lancement appliqué automatiquement aux 5 premières signatures. <a href="tarifs.html">Voir le détail complet →</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARATIF -->
+<section class="compare-section" data-screen-label="07 Comparatif">
   <div class="compare-content">
-    <div class="section-label fade-in" style="text-align: center; display: block; text-align: center;">Comparatif</div>
-    <h2 class="section-title fade-in" style="text-align: center;">Pourquoi Growth-IA<br>plutôt qu'<em>une agence classique</em> ?</h2>
-    
+    <div style="text-align: center;">
+      <div class="section-label fade-in" style="display: inline-flex;">Comparatif</div>
+      <h2 class="section-title fade-in">Growth-IA vs <em>agence SEO classique</em>.</h2>
+    </div>
+
     <div class="compare-table fade-in">
       <div class="compare-row header">
         <div class="compare-cell label">Critère</div>
@@ -1034,14 +1969,14 @@ h1.hero-title .underline::after {
         <div class="compare-cell"><span class="compare-icon no">✕</span></div>
       </div>
       <div class="compare-row">
-        <div class="compare-cell label">Audit gratuit sans engagement</div>
+        <div class="compare-cell label">Guide d'auto-diagnostic gratuit</div>
         <div class="compare-cell"><span class="compare-icon no">✕</span></div>
         <div class="compare-cell featured"><span class="compare-icon yes">✓</span></div>
         <div class="compare-cell">—</div>
       </div>
       <div class="compare-row">
-        <div class="compare-cell label">Connaissance des PME lyonnaises</div>
-        <div class="compare-cell"><span class="compare-icon partial">~</span></div>
+        <div class="compare-cell label">Sans engagement long</div>
+        <div class="compare-cell"><span class="compare-icon no">✕</span></div>
         <div class="compare-cell featured"><span class="compare-icon yes">✓</span></div>
         <div class="compare-cell"><span class="compare-icon yes">✓</span></div>
       </div>
@@ -1055,15 +1990,109 @@ h1.hero-title .underline::after {
   </div>
 </section>
 
+<!-- NOTE DU FONDATEUR -->
+<section class="founder-section" data-screen-label="08 Fondateur">
+  <div class="founder-wrap">
+    <div class="founder-avatar">I</div>
+    <div class="founder-text">
+      <div class="section-label fade-in">Note honnête du fondateur</div>
+      <h2 class="fade-in">On <em>démarre</em>. Et on l'assume.</h2>
+      <p class="fade-in">
+        Je suis Ilyes Bennacer, fondateur de Growth-IA. <strong>Je ne vais pas vous mentir avec 50 faux témoignages</strong> — Growth-IA vient d'être lancé.
+      </p>
+      <p class="fade-in">
+        Ce que je peux vous garantir à la place&nbsp;: une méthode rigoureuse, des tarifs honnêtes, une transparence totale sur ce qui marche et ce qui ne marche pas. Et l'opportunité, pour les premiers clients, de figurer dans nos prochains cas d'études à <strong>tarif lancement -40%</strong>.
+      </p>
+      <p class="fade-in">
+        Si vous êtes prêt à parier avec moi sur ce moment précis où les recherches IA explosent, on bâtit quelque chose de solide ensemble. Sinon, prenez au moins le guide gratuit — il vous fera gagner du temps même sans nous.
+      </p>
+      <div class="founder-sign fade-in">
+        <span class="founder-sign-name">Ilyes B.</span>
+        <span class="founder-sign-role">Fondateur · Saint-Priest (69)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" data-screen-label="09 FAQ">
+  <div class="faq-content">
+    <div class="faq-header">
+      <div class="section-label fade-in" style="display: inline-flex;">Questions fréquentes</div>
+      <h2 class="section-title fade-in">Les vraies <em>questions</em> qu'on nous pose.</h2>
+    </div>
+
+    <details class="faq-item fade-in">
+      <summary class="faq-q">C'est combien et est-ce que je peux annuler ?</summary>
+      <div class="faq-a">
+        Les tarifs sont publics et sans surprise. En offre lancement&nbsp;: <strong>174€</strong> l'audit, <strong>894€</strong> le pack Démarrage, <strong>354€/mois</strong> le pack Croissance (6 mois). Le pack Démarrage est <strong>garanti 30 jours</strong>&nbsp;: si à la livraison vous n'êtes pas convaincu, on rembourse. Le pack Croissance est résiliable avec 1 mois de préavis.
+      </div>
+    </details>
+
+    <details class="faq-item fade-in">
+      <summary class="faq-q">Combien de temps avant de voir des résultats ?</summary>
+      <div class="faq-a">
+        Les IA réindexent les sources <strong>en 2 à 8 semaines</strong>. Les premiers mouvements (apparition dans Perplexity, mention dans ChatGPT) sont visibles dès le 2<sup>e</sup> mois. Le top 3 stable demande généralement 4 à 6 mois de travail régulier. <strong>Si quelqu'un vous promet des résultats en 2 semaines, fuyez.</strong>
+      </div>
+    </details>
+
+    <details class="faq-item fade-in">
+      <summary class="faq-q">Pourquoi pas juste faire du SEO Google classique ?</summary>
+      <div class="faq-a">
+        Parce que ChatGPT, Claude et Perplexity <strong>ne lisent pas le web comme Google</strong>. Ils privilégient les sources structurées (schema.org), les annuaires de confiance, les avis détaillés et les contenus écrits pour être <em>résumés</em>. Un site bien référencé Google peut être totalement invisible dans une réponse ChatGPT. On travaille les deux, en parallèle.
+      </div>
+    </details>
+
+    <details class="faq-item fade-in">
+      <summary class="faq-q">Vous n'avez pas encore de clients référencés, pourquoi vous faire confiance ?</summary>
+      <div class="faq-a">
+        Question légitime. <strong>Trois réponses :</strong><br>
+        1. La méthode est documentée publiquement dans notre page <a href="methode.html" style="color:var(--accent)">Méthode</a> — vous pouvez la vérifier ligne par ligne.<br>
+        2. Le pack Audit (174€) est un risque minime pour valider notre sérieux avant d'aller plus loin.<br>
+        3. Le pack Démarrage est <strong>remboursé si non livré dans les délais</strong> ou si vous n'êtes pas satisfait à la restitution.
+      </div>
+    </details>
+
+    <details class="faq-item fade-in">
+      <summary class="faq-q">Je suis dentiste / avocat / artisan. Est-ce que ça marche pour mon métier ?</summary>
+      <div class="faq-a">
+        Oui — tant que vous avez une activité <strong>locale</strong> où des clients potentiels demandent des recommandations. Dentistes, avocats, experts-comptables, restaurants, artisans, garagistes, cabinets esthétiques, kinés, paysagistes... <strong>Tout métier où la recommandation compte plus que le prix</strong> est concerné. À l'inverse, le e-commerce pur ou les marques nationales ne sont pas notre cible.
+      </div>
+    </details>
+
+    <details class="faq-item fade-in">
+      <summary class="faq-q">Combien de temps je dois y passer de mon côté ?</summary>
+      <div class="faq-a">
+        Très peu. <strong>1h pour l'audit</strong> (entretien initial), <strong>2-3h sur le pack Démarrage</strong> (validation des contenus et accès), puis <strong>~30 min/mois</strong> en suivi Croissance. On fait tout, vous validez.
+      </div>
+    </details>
+
+    <details class="faq-item fade-in">
+      <summary class="faq-q">Et si mes concurrents font la même chose ?</summary>
+      <div class="faq-a">
+        C'est <strong>exactement</strong> ce qui va arriver dans 6-12 mois. La question n'est pas <em>si</em> ils le feront, mais <em>quand</em>. Aujourd'hui, 87% des PME locales n'ont rien fait. Bouger maintenant = prendre des positions difficiles à déloger plus tard. Attendre = subir.
+      </div>
+    </details>
+
+    <details class="faq-item fade-in">
+      <summary class="faq-q">Qu'est-ce qu'il y a dans le guide gratuit ?</summary>
+      <div class="faq-a">
+        14 pages de méthode appliquée&nbsp;: comment les IA choisissent qui recommander, les 5 erreurs Google Business à corriger ce week-end, comment exploiter les avis pour ChatGPT, et un checklist actionnable. <strong>Pas de pavé marketing</strong>, que du concret. <a href="#magnet" style="color:var(--accent)">Le télécharger →</a>
+      </div>
+    </details>
+  </div>
+</section>
+
 <!-- CTA FINAL -->
-<section class="cta-final">
+<section class="cta-final" data-screen-label="10 CTA final">
   <div class="cta-final-content">
-    <h2 class="section-title">Prêt à <em>reprendre votre place</em> ?</h2>
-    <p>Demandez votre audit gratuit. Sous 5 jours, vous recevez un mini-rapport personnalisé sur votre visibilité IA actuelle. Aucun engagement.</p>
-    <a href="/contact" class="btn-primary">
+    <h2>Prêt à <em>reprendre votre place</em> dans les réponses IA&nbsp;?</h2>
+    <p>Commencez par le guide gratuit (14 pages, 0€), ou demandez directement votre audit. Sous 24h, on vous rappelle pour cadrer.</p>
+    <a href="contact.html" class="btn-primary">
       Demander mon audit gratuit
       <span>→</span>
     </a>
+    <div class="cta-final-foot">Réponse sous 24h · Sans engagement · Tarif lancement -40% appliqué automatiquement</div>
   </div>
 </section>
 
@@ -1073,33 +2102,31 @@ h1.hero-title .underline::after {
     <div>
       <a href="/" class="logo" style="margin-bottom: 16px;"><img src="assets/logo-symbole.png" alt="Growth-IA" class="logo-img"><span class="logo-text">Growth-IA</span></a>
       <p class="footer-brand">
-        Spécialiste de la visibilité IA pour PME de Saint-Priest et de la région lyonnaise. Fondé par Ilyes Bennacer.
+        Visibilité IA pour PME de Saint-Priest, Lyon, Vienne et alentours. Fondé par Ilyes Bennacer.
       </p>
     </div>
     <div class="footer-col">
       <h4>Pages</h4>
-      <a href="/audit">Audit IA</a>
-      <a href="/tarifs">Tarifs</a>
-      <a href="/methode">Méthode</a>
-      <a href="/cas-client">Cas client</a>
-      <a href="/apropos">À propos</a>
+      <a href="methode.html">Méthode</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="contact.html">Contact</a>
     </div>
     <div class="footer-col">
-      <h4>Offres</h4>
-      <a href="/tarifs#audit">Audit (290€)</a>
-      <a href="/tarifs#demarrage">Démarrage (1490€)</a>
-      <a href="/tarifs#croissance">Croissance (590€/mois)</a>
+      <h4>Offres lancement</h4>
+      <a href="tarifs.html#audit">Audit · 174€ <span style="color:var(--ink-mute);text-decoration:line-through;font-size:11px">290€</span></a>
+      <a href="tarifs.html#demarrage">Démarrage · 894€ <span style="color:var(--ink-mute);text-decoration:line-through;font-size:11px">1490€</span></a>
+      <a href="tarifs.html#croissance">Croissance · 354€/mois <span style="color:var(--ink-mute);text-decoration:line-through;font-size:11px">590€</span></a>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
       <a href="mailto:contact@growth-ia.com">contact@growth-ia.com</a>
       <a href="tel:0652197721">06 52 19 77 21</a>
-      <a href="/contact">Demander un audit</a>
+      <a href="contact.html">Demander un audit</a>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Growth-IA · Auto-entreprise · Ilyes Bennacer · Saint-Priest 69800</span>
-    <span><a href="/mentions" style="color: inherit;">Mentions légales</a></span>
+    <span><a href="mentions.html" style="color: inherit;">Mentions légales</a></span>
   </div>
 </footer>
 
@@ -1113,9 +2140,9 @@ h1.hero-title .underline::after {
 
 <div class="chat-window" id="chatWindow">
   <div class="chat-header">
-    <div class="chat-avatar-bot">G</div>
+    <div class="chat-avatar-bot">I</div>
     <div class="chat-header-info">
-      <div class="name">Assistant Growth-IA</div>
+      <div class="name">Conseiller Growth-IA</div>
       <div class="status">En ligne · Réponse instantanée</div>
     </div>
   </div>
@@ -1130,34 +2157,34 @@ h1.hero-title .underline::after {
 
 <script src="script.js"></script>
 <script>
-// Effet machine à écrire
-const aiNames = ['ChatGPT', 'Claude', 'Gemini', 'Perplexity'];
-const typewriter = document.getElementById('typewriter');
-let twIndex = 0, charIndex = 0, isDeleting = false;
-
-function typewriterEffect() {
-  if (!typewriter) return;
-  const current = aiNames[twIndex];
-  if (!isDeleting) {
-    typewriter.textContent = current.substring(0, charIndex + 1);
-    charIndex++;
-    if (charIndex === current.length) {
-      isDeleting = true;
-      setTimeout(typewriterEffect, 2000);
-      return;
+// Lead magnet form — envoi via formsubmit.co (AJAX)
+document.getElementById('magnetForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = this;
+  const btn = form.querySelector('button');
+  const originalText = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = 'Envoi...';
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      form.style.display = 'none';
+      document.getElementById('magnetSuccess').classList.add('show');
+    } else {
+      btn.disabled = false;
+      btn.innerHTML = originalText;
+      alert("Une erreur s'est produite. Merci d'écrire directement à contact@growth-ia.com");
     }
-    setTimeout(typewriterEffect, 100);
-  } else {
-    typewriter.textContent = current.substring(0, charIndex - 1);
-    charIndex--;
-    if (charIndex === 0) {
-      isDeleting = false;
-      twIndex = (twIndex + 1) % aiNames.length;
-    }
-    setTimeout(typewriterEffect, 50);
+  } catch (err) {
+    btn.disabled = false;
+    btn.innerHTML = originalText;
+    alert("Une erreur s'est produite. Merci d'écrire directement à contact@growth-ia.com");
   }
-}
-setTimeout(typewriterEffect, 1500);
+});
 </script>
 
 </body>

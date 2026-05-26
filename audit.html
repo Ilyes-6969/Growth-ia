@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
 .simulator-section {
@@ -63,7 +63,7 @@
   color: var(--ink);
   font-size: 18px;
   font-family: inherit;
-  font-family: 'Fraunces', serif;
+  font-family: 'Inter', sans-serif;
   transition: all 0.3s;
   outline: none;
 }
@@ -110,7 +110,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 .sim-result h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 24px;
   margin-bottom: 12px;
   color: var(--ink);
@@ -151,7 +151,7 @@
   transform: translateY(-4px);
 }
 .included-card .num {
-  font-family: 'Fraunces', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
   color: var(--accent);
@@ -159,7 +159,7 @@
   font-weight: 600;
 }
 .included-card h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 20px;
   margin-bottom: 12px;
   color: var(--ink);
@@ -169,23 +169,60 @@
   .simulator { padding: 28px 20px; }
   .simulator-section, .what-included { padding-left: 20px; padding-right: 20px; }
 }
+
+.launch-banner {
+  background: linear-gradient(90deg, #0a0a09, #1a1a17, #0a0a09);
+  color: var(--paper);
+  padding: 10px 24px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 101;
+}
+.launch-banner .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+  animation: pulse 2s infinite;
+}
+.launch-banner strong { color: var(--accent); font-weight: 700; }
+.launch-banner a { color: var(--paper); text-decoration: underline; font-weight: 600; }
+body.with-banner { padding-top: 40px; }
+nav.with-banner { top: 40px; }
+@media (max-width: 768px) {
+  .launch-banner { font-size: 11px; padding: 8px 16px; gap: 8px; }
+}
+
 </style>
 </head>
-<body>
+<body class="with-banner">
+<div class="launch-banner">
+  <span class="dot"></span>
+  <span><strong>Offre lancement</strong> · les 5 premiers clients à <strong>-40%</strong> sur tous les packs · <a href="tarifs.html">En profiter →</a></span>
+</div>
+
 <div class="scroll-progress" id="scrollProgress"></div>
-<nav id="nav">
+<nav id="nav" class="with-banner">
   <div class="nav-left">
     <button class="menu-toggle" aria-label="Ouvrir le menu">
       <span class="menu-toggle-icon"><span></span><span></span><span></span></span>
     </button>
-    <a href="/" class="logo"><img src="assets/logo-symbole.png" alt="Growth-IA" class="logo-img"><span class="logo-text">Growth-IA</span></a>
+    <a href="index.html" class="logo"><img src="assets/logo-symbole.png" alt="Growth-IA" class="logo-img"><span class="logo-text">Growth-IA</span></a>
   </div>
   <div class="nav-actions">
     <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
       <span class="icon-moon">🌙</span>
       <span class="icon-sun">☀️</span>
     </button>
-    <a href="/contact" class="cta-nav">Audit gratuit</a>
+    <a href="contact.html" class="cta-nav">Audit gratuit</a>
   </div>
 </nav>
 
@@ -193,14 +230,10 @@
 
 <aside class="nav-panel" id="navPanel">
   <ul class="nav-links">
-    <li><a href="/">Accueil</a></li>
-    <li><a href="/audit" class="active">Audit IA</a></li>
-    <li><a href="/tarifs">Tarifs</a></li>
-    <li><a href="/methode">Méthode</a></li>
-    <li><a href="/cas-client">Cas client</a></li>
-    <li><a href="/blog">Blog</a></li>
-    <li><a href="/apropos">À propos</a></li>
-    <li><a href="/contact">Contact</a></li>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="methode.html">Méthode</a></li>
+    <li><a href="tarifs.html">Tarifs</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="nav-panel-footer">
     <div class="nav-panel-footer-label">Contact direct</div>
@@ -214,9 +247,9 @@
 
 <section class="page-hero">
   <div class="page-hero-content">
-    <div class="section-label fade-in">Audit IA gratuit</div>
-    <h1 class="page-title fade-in">Testez votre <em>visibilité</em>.</h1>
-    <p class="page-hero-subtitle fade-in">Découvrez en 30 secondes comment ChatGPT et les autres IA parlent (ou non) de votre entreprise. Test gratuit, sans engagement.</p>
+    <div class="section-label fade-in">Test gratuit · 30 secondes</div>
+    <h1 class="page-title fade-in">Testez votre <em>visibilité IA</em>.</h1>
+    <p class="page-hero-subtitle fade-in">Générez en 30 secondes le prompt à tester sur ChatGPT, Claude, Gemini ou Perplexity. Si votre nom n'apparaît pas dans les réponses, vous savez ce qu'il vous reste à faire. <strong style="color: var(--accent);">Audit complet à 174€</strong> (au lieu de 290€) avec l'offre lancement.</p>
   </div>
 </section>
 
@@ -249,10 +282,10 @@
         <h3>Voici votre prompt à tester</h3>
         <p>Copiez-collez ce prompt dans <strong>chat.openai.com</strong>, <strong>claude.ai</strong>, <strong>gemini.google.com</strong> ou <strong>perplexity.ai</strong>. Si votre nom n'apparaît pas dans les premières réponses, vous savez ce qu'il vous reste à faire.</p>
         <div class="sim-prompt" id="simPrompt"></div>
-        <p style="font-size: 14px;">Pour aller plus loin, demandez-nous un audit complet : 40 tests sur les 4 IA, rapport de 10 pages, et plan d'action personnalisé.</p>
+        <p style="font-size: 14px;">Pour aller plus loin, demandez-nous un audit complet : 40 tests sur les 4 IA, rapport de 10 pages, et plan d'action personnalisé — <strong>à 174€ en offre lancement</strong>.</p>
         <div class="sim-cta">
-          <a href="/contact" class="btn-primary">Demander l'audit complet <span>→</span></a>
-          <a href="/tarifs" class="btn-ghost">Voir les tarifs</a>
+          <a href="contact.html" class="btn-primary">Demander l'audit complet <span>→</span></a>
+          <a href="index.html#magnet" class="btn-ghost">Le guide gratuit d'abord</a>
         </div>
       </div>
     </div>
@@ -261,9 +294,9 @@
 
 <section class="what-included">
   <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-    <div class="section-label fade-in" style="display: inline-block;">Pack Audit · 290€</div>
+    <div class="section-label fade-in" style="display: inline-block;">Pack Audit · <s style="opacity:0.5">290€</s> <strong style="color:var(--accent)">174€ lancement</strong></div>
     <h2 class="section-title fade-in">Ce qui est <em>inclus</em>.</h2>
-    <p class="page-hero-subtitle fade-in" style="margin: 0 auto;">Au-delà du test gratuit, le pack Audit complet vous donne une vision exhaustive de votre situation et un plan d'action chiffré.</p>
+    <p class="page-hero-subtitle fade-in" style="margin: 0 auto;">Au-delà du test gratuit, le pack Audit complet vous donne une vision exhaustive de votre situation et un plan d'action chiffré. <strong>Tarif lancement -40%</strong> appliqué aux 5 premières signatures.</p>
   </div>
   <div class="included-grid">
     <div class="included-card fade-in">
@@ -292,16 +325,16 @@
 <footer>
   <div class="footer-content">
     <div>
-      <a href="/" class="logo" style="margin-bottom: 16px;"><img src="assets/logo-symbole.png" alt="Growth-IA" class="logo-img"><span class="logo-text">Growth-IA</span></a>
-      <p class="footer-brand">Spécialiste de la visibilité IA pour PME de Saint-Priest et de la région lyonnaise.</p>
+      <a href="index.html" class="logo" style="margin-bottom: 16px;"><img src="assets/logo-symbole.png" alt="Growth-IA" class="logo-img"><span class="logo-text">Growth-IA</span></a>
+      <p class="footer-brand">Spécialiste de la visibilité IA pour PME de Saint-Priest, Lyon, Vienne et alentours.</p>
     </div>
-    <div class="footer-col"><h4>Pages</h4><a href="/audit">Audit IA</a><a href="/tarifs">Tarifs</a><a href="/methode">Méthode</a><a href="/cas-client">Cas client</a><a href="/apropos">À propos</a></div>
-    <div class="footer-col"><h4>Offres</h4><a href="/tarifs#audit">Audit (290€)</a><a href="/tarifs#demarrage">Démarrage (1490€)</a><a href="/tarifs#croissance">Croissance (590€/mois)</a></div>
+    <div class="footer-col"><h4>Pages</h4><a href="methode.html">Méthode</a><a href="tarifs.html">Tarifs</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h4>Offres lancement</h4><a href="tarifs.html#audit">Audit · 174€</a><a href="tarifs.html#demarrage">Démarrage · 894€</a><a href="tarifs.html#croissance">Croissance · 354€/mois</a></div>
     <div class="footer-col"><h4>Contact</h4><a href="mailto:contact@growth-ia.com">contact@growth-ia.com</a><a href="tel:0652197721">06 52 19 77 21</a></div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Growth-IA · Auto-entreprise · Ilyes Bennacer · Saint-Priest 69800</span>
-    <span><a href="/mentions" style="color: inherit;">Mentions légales</a></span>
+    <span><a href="mentions.html" style="color: inherit;">Mentions légales</a></span>
   </div>
 </footer>
 
@@ -334,7 +367,6 @@ document.getElementById('simRun').addEventListener('click', () => {
   const prompt = `Quel est le meilleur ${activity} à ${selectedCity} ? Connais-tu "${business}" ? Comment se positionne-t-il par rapport aux autres ?`;
   document.getElementById('simPrompt').textContent = prompt;
   document.getElementById('simResult').classList.add('show');
-  document.getElementById('simResult').scrollIntoView({ behavior: 'smooth', block: 'center' });
 });
 </script>
 </body>

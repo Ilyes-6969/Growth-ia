@@ -97,10 +97,10 @@ function initEverything() {
   let chatHistory = [];
   
   const initialSuggestions = [
-    "C'est quoi un audit IA ?",
-    "Combien ça coûte ?",
-    "Comment ça marche ?",
-    "Qui peut en bénéficier ?"
+    "🎁 J'aimerais le guide gratuit",
+    "💰 C'est combien (tarif lancement) ?",
+    "⏱️ Combien de temps avant des résultats ?",
+    "🤔 Pourquoi pas juste du SEO Google ?"
   ];
   
   function openChat() {
@@ -110,7 +110,7 @@ function initEverything() {
     if (chatBadge) chatBadge.style.display = 'none';
     if (chatMessages && chatMessages.children.length === 0) {
       setTimeout(() => {
-        addBotMessage("Bonjour ! 👋 Je suis l'assistant Growth-IA. Je peux répondre à vos questions sur la visibilité IA, nos offres, ou vous aider à choisir le bon pack pour votre activité. Posez-moi votre question !");
+        addBotMessage("👋 Bonjour, je suis le conseiller Growth-IA. **On démarre actuellement** et les 5 premiers clients bénéficient de **-40% sur tous les packs**.\n\nJe peux vous expliquer notre offre, vous orienter vers le bon pack, ou vous envoyer le guide gratuit. Que puis-je faire pour vous ?");
         showSuggestions(initialSuggestions);
       }, 300);
     }
@@ -207,7 +207,7 @@ function initEverything() {
       if (data.reply) {
         addBotMessage(data.reply);
         chatHistory.push({ role: 'assistant', content: data.reply });
-        showSuggestions(["Demander un audit gratuit", "Voir les tarifs", "Plus de détails"]);
+        showSuggestions(["📅 Réserver un audit gratuit", "💰 Voir les tarifs lancement", "📄 Recevoir le guide PDF"]);
       } else {
         addErrorMessage("Réponse invalide. Réessayez.");
       }
@@ -232,11 +232,13 @@ function initEverything() {
   
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('chat-suggestion')) {
-      const text = e.target.textContent;
-      if (text.toLowerCase().includes('audit gratuit')) {
-        setTimeout(() => { window.location.href = '/contact'; }, 200);
-      } else if (text.toLowerCase().includes('tarifs')) {
-        setTimeout(() => { window.location.href = '/tarifs'; }, 200);
+      const text = e.target.textContent.toLowerCase();
+      if (text.includes('audit gratuit') || text.includes('réserver')) {
+        setTimeout(() => { window.location.href = 'contact.html'; }, 200);
+      } else if (text.includes('tarif')) {
+        setTimeout(() => { window.location.href = 'tarifs.html'; }, 200);
+      } else if (text.includes('guide')) {
+        setTimeout(() => { window.location.href = 'index.html#magnet'; }, 200);
       }
     }
   });

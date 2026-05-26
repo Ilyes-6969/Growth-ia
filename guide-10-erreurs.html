@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Les 10 erreurs qui rendent votre PME invisible dans ChatGPT · Growth-IA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #faf8f3;
+    --ink: #0a0a09;
+    --ink-soft: rgba(10,10,9,0.72);
+    --ink-mute: rgba(10,10,9,0.5);
+    --accent: #e63d18;
+    --accent-soft: rgba(230,61,24,0.08);
+    --border: rgba(10,10,9,0.12);
+    --bg-card: #fff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #d8d5cd; color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.55; }
+  body { padding: 40px 20px; }
+
+  /* A4 page */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    max-width: 100%;
+    margin: 0 auto 24px;
+    background: var(--paper);
+    padding: 22mm 22mm 20mm;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+  }
+  .page:last-child { page-break-after: avoid; margin-bottom: 0; }
+
+  /* Header */
+  .pg-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 36px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5pt;
+    color: var(--ink-mute);
+    letter-spacing: 0.4px;
+  }
+  .pg-header .brand {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0;
+    text-transform: none;
+    font-size: 10pt;
+  }
+  .pg-header .brand .dot { color: var(--accent); }
+  .pg-footer {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8.5pt;
+    color: var(--ink-mute);
+    letter-spacing: 0.4px;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4 { font-weight: 700; color: var(--ink); letter-spacing: -0.02em; }
+  h1 { font-size: 44pt; line-height: 1; letter-spacing: -0.04em; }
+  h1 em { font-style: italic; color: var(--accent); font-weight: 700; }
+  h2 { font-size: 26pt; line-height: 1.05; margin-bottom: 10pt; letter-spacing: -0.03em; }
+  h2 em { font-style: italic; color: var(--accent); }
+  h3 { font-size: 14pt; margin-bottom: 8pt; }
+  h4 { font-size: 11pt; text-transform: uppercase; letter-spacing: 1.4pt; color: var(--accent); margin-bottom: 8pt; font-weight: 700; }
+  p { font-size: 10.5pt; line-height: 1.6; color: var(--ink-soft); margin-bottom: 10pt; }
+  p strong { color: var(--ink); font-weight: 600; }
+  p em { font-style: italic; }
+  ul, ol { margin: 10pt 0 14pt 16pt; }
+  li { font-size: 10.5pt; line-height: 1.6; color: var(--ink-soft); margin-bottom: 6pt; }
+  li strong { color: var(--ink); font-weight: 600; }
+  .lead { font-size: 13pt; line-height: 1.5; color: var(--ink); font-weight: 400; margin-bottom: 16pt; }
+  .lead strong { font-weight: 700; }
+
+  /* Cover */
+  .cover {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0;
+    overflow: hidden;
+  }
+  .cover-inner {
+    padding: 28mm 22mm;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .cover-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(250,248,243,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(250,248,243,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse at 70% 30%, black 30%, transparent 80%);
+    pointer-events: none;
+  }
+  .cover-orb {
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, var(--accent), transparent 60%);
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+  }
+  .cover h1 { color: var(--paper); margin: auto 0; }
+  .cover h1 em { color: var(--accent); }
+  .cover-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10pt;
+    letter-spacing: 2pt;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 16pt;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-eyebrow .dot {
+    display: inline-block;
+    width: 8px; height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: 10pt;
+    vertical-align: middle;
+  }
+  .cover-meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9pt;
+    color: rgba(250,248,243,0.6);
+    letter-spacing: 0.5pt;
+    padding-top: 24pt;
+    border-top: 1px solid rgba(250,248,243,0.15);
+    position: relative;
+    z-index: 1;
+  }
+  .cover-sub {
+    font-size: 16pt;
+    color: rgba(250,248,243,0.85);
+    margin-top: 28pt;
+    line-height: 1.4;
+    max-width: 80%;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-brand {
+    font-family: 'Inter', sans-serif;
+    font-size: 11pt;
+    color: rgba(250,248,243,0.6);
+    margin-bottom: auto;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .cover-brand-logo {
+    width: 22px; height: 22px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 10pt;
+    font-style: italic;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Error pages */
+  .err-num {
+    font-family: 'Inter', sans-serif;
+    font-size: 90pt;
+    font-weight: 700;
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+    color: var(--accent);
+    font-style: italic;
+    margin-bottom: 4pt;
+  }
+  .err-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9pt;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 6pt;
+  }
+  .err-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 22pt;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 20pt;
+    color: var(--ink);
+  }
+  .err-title em { font-style: italic; color: var(--accent); font-weight: 700; }
+  .err-callout {
+    margin-top: auto;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding: 14pt 18pt;
+    border-radius: 4px;
+  }
+  .err-callout .lbl {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8.5pt;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 6pt;
+  }
+  .err-callout p {
+    font-size: 10pt;
+    margin-bottom: 0;
+    color: var(--ink);
+    line-height: 1.55;
+  }
+  .err-callout p strong { color: var(--ink); font-weight: 700; }
+
+  .err-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12pt;
+    margin: 14pt 0;
+  }
+  .err-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6pt;
+    padding: 14pt 16pt;
+  }
+  .err-card.bad { border-left: 3px solid #ef4444; }
+  .err-card.good { border-left: 3px solid #10b981; }
+  .err-card h5 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8.5pt;
+    letter-spacing: 1.5pt;
+    text-transform: uppercase;
+    margin-bottom: 8pt;
+  }
+  .err-card.bad h5 { color: #ef4444; }
+  .err-card.good h5 { color: #10b981; }
+  .err-card p { font-size: 9.5pt; margin-bottom: 0; line-height: 1.5; }
+
+  /* Final pages */
+  .checklist { margin: 16pt 0; }
+  .checklist-item {
+    display: flex;
+    gap: 12pt;
+    padding: 10pt 14pt;
+    border: 1px solid var(--border);
+    border-radius: 6pt;
+    margin-bottom: 8pt;
+    align-items: flex-start;
+  }
+  .checklist-item .box {
+    width: 16px; height: 16px;
+    border: 1.5px solid var(--ink);
+    border-radius: 3px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .checklist-item .txt { font-size: 10pt; line-height: 1.5; color: var(--ink); }
+  .checklist-item .txt strong { font-weight: 700; }
+  .checklist-item .time {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8.5pt;
+    color: var(--ink-mute);
+    margin-top: 4pt;
+  }
+
+  .cta-box {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28pt 24pt;
+    border-radius: 8pt;
+    margin-top: 14pt;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-box::before {
+    content: '';
+    position: absolute;
+    top: -50px; right: -50px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, var(--accent), transparent 60%);
+    border-radius: 50%;
+    opacity: 0.4;
+    filter: blur(30px);
+  }
+  .cta-box h3 { color: var(--paper); margin-bottom: 8pt; font-size: 16pt; position: relative; }
+  .cta-box h3 em { font-style: italic; color: var(--accent); }
+  .cta-box p { color: rgba(250,248,243,0.8); margin-bottom: 14pt; font-size: 10pt; position: relative; }
+  .cta-box .links {
+    display: flex;
+    flex-direction: column;
+    gap: 6pt;
+    position: relative;
+  }
+  .cta-box .links a {
+    color: var(--paper);
+    font-size: 10pt;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.5pt;
+    display: flex;
+    align-items: center;
+    gap: 8pt;
+  }
+  .cta-box .links a::before {
+    content: '→';
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .toc-list { margin: 16pt 0 0; padding-left: 0; list-style: none; }
+  .toc-list li {
+    display: flex;
+    align-items: baseline;
+    padding: 8pt 0;
+    border-bottom: 1px dashed var(--border);
+    font-size: 10.5pt;
+    color: var(--ink);
+  }
+  .toc-list li:last-child { border-bottom: none; }
+  .toc-list .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9pt;
+    color: var(--accent);
+    font-weight: 700;
+    min-width: 32pt;
+  }
+  .toc-list .title { flex: 1; font-weight: 600; }
+  .toc-list .pg {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9pt;
+    color: var(--ink-mute);
+  }
+
+  /* PRINT */
+  @media print {
+    @page { size: A4; margin: 0; }
+    html, body { background: white; padding: 0; }
+    .page { box-shadow: none; margin: 0; width: 210mm; height: 297mm; padding: 22mm 22mm 20mm; }
+    .no-print { display: none; }
+  }
+
+  /* Toolbar */
+  .print-toolbar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 12px 20px;
+    border-radius: 100px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+  }
+  .print-toolbar:hover { background: var(--accent); }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="page cover">
+  <div class="cover-orb"></div>
+  <div class="cover-bg"></div>
+  <div class="cover-inner">
+    <div class="cover-brand">
+      <span class="cover-brand-logo">G</span>
+      <span>Growth-IA · Guide n°1 · Édition 2026</span>
+    </div>
+
+    <h1>Les <em>10 erreurs</em><br>qui rendent<br>votre PME<br>invisible dans<br>ChatGPT.</h1>
+
+    <div class="cover-sub">Le manuel d'auto-diagnostic pour les pros locaux qui veulent rester visibles à l'ère des recherches IA.</div>
+
+    <div class="cover-meta">
+      <span>14 pages · Lecture 18 min</span>
+      <span>Ilyes Bennacer · Saint-Priest</span>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2 — PRÉFACE -->
+<div class="page">
+  <div class="pg-header">
+    <span class="brand">Growth-<span class="dot">IA</span></span>
+    <span>Préface</span>
+  </div>
+
+  <h2>Pourquoi ce guide<br><em>existe</em>.</h2>
+
+  <p class="lead">En 2024, j'ai aidé un ami dentiste à comprendre pourquoi son cabinet, pourtant excellent et bien noté, ne recevait plus de nouveaux patients. La réponse était simple : <strong>il était totalement invisible dans ChatGPT</strong>.</p>
+
+  <p>Quand on tapait <em>"meilleur dentiste à Saint-Priest"</em> dans Google, son site sortait en première page. Mais quand on demandait la même chose à ChatGPT, Claude ou Perplexity, son nom n'apparaissait jamais. Trois autres cabinets, parfois moins qualifiés mais mieux référencés dans les sources que les IA consultent, prenaient sa place.</p>
+
+  <p>Ce déclic a donné naissance à Growth-IA. Mais avant même les premiers clients payants, j'ai voulu donner ce guide. <strong>Parce que la plupart des erreurs ne demandent pas un expert pour être corrigées</strong> — juste de savoir qu'elles existent.</p>
+
+  <p>Vous trouverez dans les pages suivantes les 10 erreurs que je vois <strong>chez 9 PME locales sur 10</strong>. Pour chacune : le constat, l'action concrète, le temps que ça prend, et le gain attendu.</p>
+
+  <p>Lisez. Appliquez les 30 premières minutes ce week-end. Et si vous voulez aller plus loin, on en reparle.</p>
+
+  <p style="margin-top: 24pt; font-style: italic; font-size: 13pt; color: var(--ink);">— Ilyes B., fondateur Growth-IA</p>
+
+  <div class="pg-footer">
+    <span>growth-ia.com</span>
+    <span>02 · Préface</span>
+  </div>
+</div>
+
+<!-- PAGE 3 — SOMMAIRE -->
+<div class="page">
+  <div class="pg-header">
+    <span class="brand">Growth-<span class="dot">IA</span></span>
+    <span>Sommaire</span>
+  </div>
+
+  <h2>Ce que vous allez<br><em>découvrir</em>.</h2>
+
+  <ol class="toc-list">
+    <li><span class="num">01</span> <span class="title">Confondre SEO Google et visibilité IA</span> <span class="pg">p. 04</span></li>
+    <li><span class="num">02</span> <span class="title">Bâcler sa fiche Google Business Profile</span> <span class="pg">p. 05</span></li>
+    <li><span class="num">03</span> <span class="title">Oublier le balisage Schema.org</span> <span class="pg">p. 06</span></li>
+    <li><span class="num">04</span> <span class="title">Manquer les annuaires que les IA lisent</span> <span class="pg">p. 07</span></li>
+    <li><span class="num">05</span> <span class="title">Avoir des avis Google trop courts ou sans texte</span> <span class="pg">p. 08</span></li>
+    <li><span class="num">06</span> <span class="title">Écrire un site "marketing" plutôt qu'informatif</span> <span class="pg">p. 09</span></li>
+    <li><span class="num">07</span> <span class="title">Être absent des forums et communautés en ligne</span> <span class="pg">p. 10</span></li>
+    <li><span class="num">08</span> <span class="title">Avoir un NAP incohérent sur le web</span> <span class="pg">p. 11</span></li>
+    <li><span class="num">09</span> <span class="title">Manquer de mentions presse et liens externes</span> <span class="pg">p. 12</span></li>
+    <li><span class="num">10</span> <span class="title">Ne pas mesurer, ne pas itérer</span> <span class="pg">p. 13</span></li>
+  </ol>
+
+  <p style="margin-top: 22pt; font-size: 10pt;"><strong>+ Bonus :</strong> la checklist de 30 minutes à appliquer ce week-end (p. 14).</p>
+
+  <div class="pg-footer">
+    <span>growth-ia.com</span>
+    <span>03 · Sommaire</span>
+  </div>
+</div>
+
+<!-- PAGE 4 — ERREUR 1 -->
+<div class="page">
+  <div class="pg-header">
+    <span class="brand">Growth-<span class="dot">IA</span></span>
+    <span>Erreur 01/10</span>
+  </div>
+  <div class="err-label">Erreur n°</div>
+  <div class="err-num">01</div>
+  <h3 class="err-title">Confondre SEO Google et <em>visibilité IA</em>.</h3>
+
+  <p><strong>Le constat.</strong> 90% des PME pensent qu'un bon référencement Google = visibilité dans les IA. C'est faux. Google indexe et classe des pages web. ChatGPT, Claude, Gemini et Perplexity, eux, <em>résument</em> des sources structurées (annuaires, schema.org, avis, presse, contenus Q&amp;R). Un site qui sort en première page Google peut être totalement invisible dans une réponse ChatGPT.</p>
+
+  <p><strong>Pourquoi.</strong> Les IA conversationnelles ont été entraînées sur des données massives où les sources structurées dominent. Quand un utilisateur demande <em>"Quel est le meilleur dentiste à Bron ?"</em>, l'IA ne consulte pas Google en temps réel — elle puise dans son entraînement et dans quelques sources de référence (Google Business, annuaires majeurs, données indexées sémantiquement).</p>
+
+  <p><strong>L'action.</strong> Continuez le SEO Google si vous l'avez (c'est utile). Mais ajoutez en parallèle un travail de <strong>signaux structurés</strong> : fiche Google Business riche, schema.org, présence dans 10-15 annuaires de référence. C'est l'objet des 9 erreurs suivantes.</p>
+
+  <div class="err-callout">
+    <div class="lbl">À retenir</div>
+    <p>Un bon SEO Google sans visibilité IA, c'est <strong>vendre dans les annuaires papier</strong> quand tout le monde est passé sur smartphone. Vous existez, mais personne ne vous trouve.</p>
+  </div>
+
+  <div class="pg-footer">
+    <span>growth-ia.com</span>
+    <span>04 · Erreur 01</span>
+  </div>
+</div>
+
+<!-- PAGE 5 — ERREUR 2 -->
+<div class="page">
+  <div class="pg-header">
+    <span class="brand">Growth-<span class="dot">IA</span></span>
+    <span>Erreur 02/10</span>
+  </div>
+  <div class="err-label">Erreur n°</div>
+  <div class="err-num">02</div>
+  <h3 class="err-title">Bâcler sa fiche <em>Google Business Profile</em>.</h3>
+
+  <p><strong>Le constat.</strong> La fiche Google Business est la source n°1 que les IA exploitent pour les recommandations locales. Pourtant, 8 PME sur 10 ont une fiche incomplète : 1-2 catégories génériques, 0 à 3 photos datant de 3 ans, une description de 4 lignes, des horaires approximatifs, et zéro post depuis l'ouverture.</p>
+
+  <div class="err-grid">
+    <div class="err-card bad">
+      <h5>✕ Ce qu'on voit trop souvent</h5>
+      <p>"Cabinet dentaire" / 1 catégorie / 2 photos / description vide / aucun post / horaires faux le samedi</p>
+    </div>
+    <div class="err-card good">
+      <h5>✓ Ce qu'il faut faire</h5>
+      <p>4-6 catégories pertinentes / 15-20 photos récentes / description riche (200-300 mots, mots-clés métier) / 1 post / mois / horaires exacts incluant jours fériés</p>
+    </div>
+  </div>
+
+  <p><strong>L'action concrète.</strong> Bloquez 1h ce week-end. Connectez-vous à <em>business.google.com</em>. Complétez tous les champs. Ajoutez 3-4 catégories secondaires précises (ex : pas juste "Dentiste" mais aussi "Orthodontiste", "Implantologie", "Soins esthétiques"). Réécrivez la description en parlant <strong>de vos patients</strong>, pas de vous (<em>"Nous accueillons les familles et les urgences..."</em>). Publiez les photos récentes du cabinet, de l'équipe, du matériel.</p>
+
+  <div class="err-callout">
+    <div class="lbl">Impact attendu</div>
+    <p>Une fiche Google Business complète peut <strong>tripler vos mentions dans ChatGPT et Gemini</strong> en 4 à 6 semaines, sans aucune autre intervention.</p>
+  </div>
+
+  <div class="pg-footer">
+    <span>growth-ia.com</span>
+    <span>05 · Erreur 02</span>
+  </div>
+</div>
+
+<!-- PAGE 6 — ERREUR 3 -->
+<div class="page">
+  <div class="pg-header">
+    <span class="brand">Growth-<span class="dot">IA</span></span>
+    <span>Erreur 03/10</span>
+  </div>
+  <div class="err-label">Erreur n°</div>
+  <div class="err-num">03</div>
+  <h3 class="err-title">Oublier le balisage <em>Schema.org</em>.</h3>
+
+  <p><strong>Le constat.</strong> Le schema.org, c'est le langage technique que les IA et moteurs de recherche utilisent pour <em>comprendre</em> votre site. Sans lui, votre site est "muet" : les IA voient du texte sans savoir s'il s'agit d'un cabinet médical, d'un restaurant, de vos horaires, ou d'un article de blog.</p>
+
+  <p><strong>Pourquoi c'est critique pour les IA.</strong> Quand ChatGPT ou Perplexity analysent les sources de recommandation, ils privilégient les sites structurés sémantiquement. Un site avec <em>schema.org Dentist</em>, <em>OpeningHours</em>, <em>FAQ</em>, <em>Review</em>, <em>Service</em> est considéré comme une <strong>source de confiance</strong> par les algorithmes. Sans ça, votre site est traité comme un texte décoratif.</p>
+
+  <p><strong>L'action.</strong> Demandez à votre dev (ou à votre prestataire WordPress) d'ajouter au minimum trois schemas : <em>LocalBusiness</em> (ou Dentist, Lawyer, Restaurant selon votre métier), <em>OpeningHours</em>, et <em>FAQPage</em> sur la page d'accueil + la page contact. C'est <strong>1 à 2 heures de travail technique</strong>, et le gain est massif.</p>
+
+  <p><strong>Coût.</strong> 0€ si vous le faites vous-même via un plugin WordPress (RankMath, Yoast). 100-200€ si vous demandez à un prestataire ponctuel.</p>
+
+  <div class="err-callout">
+    <div class="lbl">Le test simple</div>
+    <p>Allez sur <em>validator.schema.org</em> et collez l'URL de votre site. <strong>Si rien ne s'affiche</strong>, vous êtes invisible aux yeux des IA. Cette correction est l'un des plus gros levier rapport effort/résultat.</p>
+  </div>
+
+  <div class="pg-footer">
+    <span>growth-ia.com</span>
+    <span>06 · Erreur 03</span>
+  </div>
+</div>
+
+<!-- PAGE 7 — ERREUR 4 -->
+<div class="page">
+  <div class="pg-header">
+    <span class="brand">Growth-<span class="dot">IA</span></span>
+    <span>Erreur 04/10</span>
+  </div>
+  <div class="err-label">Erreur n°</div>
+  <div class="err-num">04</div>
+  <h3 class="err-title">Manquer les annuaires que <em>les IA lisent</em>.</h3>
+
+  <p><strong>Le constat.</strong> Vous êtes sur Pages Jaunes ? Bien. Sur Google Maps ? Très bien. C'est tout ? Vous loupez 80% des sources que les IA exploitent. Les algorithmes recoupent des dizaines d'annuaires pour calculer votre légitimité.</p>
+
+  <p><strong>Les 15 annuaires qui comptent vraiment</strong> (au-delà des Pages Jaunes et Google Maps) :</p>
+
+  <ul>
+    <li><strong>Yelp France</strong> — toujours référencé par les IA, surtout pour la restauration et les services</li>
+    <li><strong>Mappy</strong> — source historique majeure, encore très utilisée</li>
+    <li><strong>Justacôté</strong> — annuaire local français très bien indexé</li>
+    <li><strong>Allo Voisins</strong> — pertinent pour artisans et services à domicile</li>
+    <li><strong>Foursquare</strong> — peu connu en France mais lu par les IA US</li>
+    <li><strong>OpenStreetMap</strong> — la source ouverte que beaucoup d'IA utilisent par défaut</li>
+    <li><strong>Hoodspot</strong>, <strong>Petit Futé</strong>, <strong>Cylex</strong>, <strong>Tuugo</strong></li>
+    <li><strong>Doctolib</strong>, <strong>MonAvocat.fr</strong>, <strong>Linkup</strong> (selon votre métier)</li>
+    <li>Annuaires sectoriels (Ordre des dentistes, des avocats, CAPEB pour le BTP...)</li>
+  </ul>
+
+  <p><strong>L'action.</strong> Bloquez 3h sur une semaine. Inscrivez-vous sur ces 15 plateformes en respectant strictement la <strong>cohérence NAP</strong> (voir erreur n°8) : Nom, Adresse, Téléphone exactement identiques partout.</p>
+
+  <div class="err-callout">
+    <div class="lbl">Pourquoi ça fonctionne</div>
+    <p>Les IA accordent une note d'<em>autorité locale</em> basée sur la <strong>multiplicité cohérente</strong> de vos mentions. 15 annuaires alignés = signal fort. 2 annuaires + une fiche bâclée = signal faible.</p>
+  </div>
+
+  <div class="pg-footer">
+    <span>growth-ia.com</span>
+    <span>07 · Erreur 04</span>
+  </div>
+</div>
+
+<!-- PAGE 8 — ERREUR 5 -->
+<div class="page">
+  <div class="pg-header">
+    <span class="brand">Growth-<span class="dot">IA</span></span>
+    <span>Erreur 05/10</span>
+  </div>
+  <div class="err-label">Erreur n°</div>
+  <div class="err-num">05</div>
+  <h3 class="err-title">Avoir des <em>avis Google</em> trop courts ou sans texte.</h3>
+
+  <p><strong>Le constat.</strong> Un avis "★★★★★" sans texte ne vaut quasi rien aux yeux des IA. Idem pour <em>"Super, je recommande !"</em>. Les algorithmes ont besoin de <strong>texte descriptif</strong> pour comprendre <em>ce que vous faites bien</em>.</p>
+
+  <p><strong>Pourquoi.</strong> Quand quelqu'un demande à ChatGPT <em>"Quel orthodontiste choisir pour mon enfant à Vénissieux ?"</em>, l'IA cherche dans ses sources des phrases qui contiennent <em>"orthodontiste"</em> + <em>"enfants"</em> + <em>"Vénissieux"</em>. Si vos 67 avis disent juste "Top !", aucun match. Si quelques-uns disent <em>"Très bon orthodontiste, mon fils de 8 ans a été parfaitement pris en charge..."</em> — match.</p>
+
+  <p><strong>L'action.</strong> Mettez en place un système d'invitation à avis structuré :</p>
+
+  <ol>
+    <li><strong>Après chaque RDV/prestation</strong>, envoyez un SMS ou email avec un lien direct vers la fiche Google.</li>
+    <li><strong>Suggérez la trame</strong> : "Pourriez-vous décrire en 2-3 phrases ce pour quoi vous êtes venu et comment ça s'est passé ?". <em>(Vous ne dictez pas l'avis, vous orientez la structure.)</em></li>
+    <li><strong>Répondez à chaque avis</strong> en réutilisant les mots-clés métier dans votre réponse (l'IA lit aussi vos réponses).</li>
+  </ol>
+
+  <div class="err-callout">
+    <div class="lbl">L'objectif chiffré</div>
+    <p>Visez <strong>50+ avis</strong> avec <strong>au moins 30 contenant 2+ phrases</strong> de texte descriptif. C'est le seuil où les IA commencent à vous "comprendre" et vous citer pour des requêtes précises.</p>
+  </div>
+
+  <div class="pg-footer">
+    <span>growth-ia.com</span>
+    <span>08 · Erreur 05</span>
+  </div>
+</div>
+
+<!-- PAGE 9 — ERREUR 6 -->
+<div class="page">
+  <div class="pg-header">
+    <span class="brand">Growth-<span class="dot">IA</span></span>
+    <span>Erreur 06/10</span>
+  </div>
+  <div class="err-label">Erreur n°</div>
+  <div class="err-num">06</div>
+  <h3 class="err-title">Écrire un site <em>"marketing"</em> plutôt qu'informatif.</h3>
+
+  <p><strong>Le constat.</strong> 90% des sites de pros locaux sont remplis de phrases creuses : <em>"Excellence, savoir-faire, écoute, professionnalisme..."</em>. Une IA qui résume votre site ne peut rien dire d'utile. Elle ne sait pas <strong>quels services vous proposez exactement</strong>, ni <strong>qui vous êtes vraiment</strong>.</p>
+
+  <div class="err-grid">
+    <div class="err-card bad">
+      <h5>✕ Style "marketing"</h5>
+      <p>"Notre équipe d'experts vous offre une prise en charge personnalisée dans un cadre chaleureux et professionnel."</p>
+    </div>
+    <div class="err-card good">
+      <h5>✓ Style informatif</h5>
+      <p>"Nous sommes 3 dentistes spécialisés en parodontie, orthodontie enfant et implants. Cabinet ouvert le samedi matin. RDV en urgence dans la journée."</p>
+    </div>
+  </div>
+
+  <p><strong>L'action.</strong> Réécrivez vos 3 pages principales (Accueil, Services, Contact) en format <em>question-réponse</em> ou <em>liste factuelle</em>. Mentionnez :</p>
+
+  <ul>
+    <li><strong>Quoi exactement</strong> : services nommés un par un, pas de catégories vagues</li>
+    <li><strong>Pour qui</strong> : enfants, urgences, personnes âgées, professionnels...</li>
+    <li><strong>Comment</strong> : prise en charge tiers-payant, langues parlées, accessibilité</li>
+    <li><strong>Combien (si pertinent)</strong> : fourchette tarifaire, devis gratuit, conventions</li>
+  </ul>
+
+  <p><strong>Ajoutez une FAQ riche</strong> sur la page d'accueil (10-15 questions de vos vrais patients/clients). C'est l'un des contenus que les IA citent le plus.</p>
+
+  <div class="err-callout">
+    <div class="lbl">Test instantané</div>
+    <p>Copiez votre page d'accueil. Collez-la dans ChatGPT avec le prompt : <em>"En 3 phrases, qui est cette entreprise et que fait-elle exactement ?"</em>. Si la réponse est floue, votre site est <strong>illisible pour les IA</strong>.</p>
+  </div>
+
+  <div class="pg-footer">
+    <span>growth-ia.com</span>
+    <span>09 · Erreur 06</span>
+  </div>
+</div>
+
+<!-- PAGE 10 — ERREUR 7 -->
+<div class="page">
+  <div class="pg-header">
+    <span class="brand">Growth-<span class="dot">IA</span></span>
+    <span>Erreur 07/10</span>
+  </div>
+  <div class="err-label">Erreur n°</div>
+  <div class="err-num">07</div>
+  <h3 class="err-title">Être absent des <em>forums et communautés</em> en ligne.</h3>
+
+  <p><strong>Le constat.</strong> Reddit, Quora, les forums sectoriels (Doctissimo, forums avocats, forums BTP), les groupes Facebook locaux... Ces espaces sont des <strong>mines d'or pour les IA</strong>, qui y puisent massivement pour comprendre <em>qui parle de quoi</em> et <em>qui est recommandé</em>.</p>
+
+  <p><strong>Pourquoi.</strong> Une discussion authentique sur Reddit où quelqu'un demande <em>"Vous connaissez un bon plombier sur Saint-Priest ?"</em> et reçoit votre nom en réponse, c'est <strong>10x plus fort</strong> qu'une mention sur votre propre site. Les IA pondèrent fortement les recommandations émanant de tiers.</p>
+
+  <p><strong>L'action.</strong> Identifiez 5-10 lieux pertinents pour votre métier :</p>
+
+  <ul>
+    <li><strong>Reddit FR</strong> : r/france, r/lyon, r/AskFrance, et les subs sectoriels</li>
+    <li><strong>Quora FR</strong> : questions liées à votre métier</li>
+    <li><strong>Groupes Facebook locaux</strong> : "Saint-Priest et ses habitants", "Lyon Est entrepreneurs"...</li>
+    <li><strong>Forums spécialisés</strong> : Doctissimo, forums avocats, forums BTP, forums véto...</li>
+  </ul>
+
+  <p><strong>La règle d'or :</strong> répondez <em>qualitativement</em>, en apportant de la valeur. Ne pas spammer. Mentionnez votre activité sans en faire un pitch. <strong>1 réponse utile bien tournée par semaine</strong> = 50 réponses spam.</p>
+
+  <div class="err-callout">
+    <div class="lbl">Objectif réaliste</div>
+    <p>15 réponses qualitatives sur 6 mois suffisent pour faire bouger significativement le scoring "autorité communautaire" aux yeux des IA. <strong>~1h par semaine.</strong></p>
+  </div>
+
+  <div class="pg-footer">
+    <span>growth-ia.com</span>
+    <span>10 · Erreur 07</span>
+  </div>
+</div>
+
+<!-- PAGE 11 — ERREUR 8 -->
+<div class="page">
+  <div class="pg-header">
+    <span class="brand">Growth-<span class="dot">IA</span></span>
+    <span>Erreur 08/10</span>
+  </div>
+  <div class="err-label">Erreur n°</div>
+  <div class="err-num">08</div>
+  <h3 class="err-title">Avoir un <em>NAP incohérent</em> sur le web.</h3>
+
+  <p><strong>Le constat.</strong> NAP = Name, Address, Phone. C'est le triptyque que les IA croisent partout pour vérifier votre légitimité. Et 7 PME sur 10 ont des incohérences : <em>"Cabinet Dr Dupont"</em> sur Google, <em>"Cabinet dentaire Jean Dupont"</em> sur Pages Jaunes, <em>"Dr J. Dupont &amp; Associés"</em> sur le site, trois numéros différents selon les annuaires.</p>
+
+  <p><strong>Pourquoi c'est grave.</strong> Quand une IA croise vos infos sur 10 sources et trouve 3 variantes différentes, elle vous considère comme <strong>peu fiable</strong>. Elle préfère citer un concurrent dont les 10 sources disent exactement la même chose.</p>
+
+  <p><strong>L'action.</strong> Choisissez <em>une seule formulation officielle</em> pour ces 3 champs. Notez-la. Puis allez la corriger partout :</p>
+
+  <ul>
+    <li>Votre site web (pied de page, page contact)</li>
+    <li>Google Business Profile</li>
+    <li>Pages Jaunes, Yelp, Mappy, Justacôté, et tous les annuaires</li>
+    <li>Vos profils sociaux (LinkedIn pro, Facebook, Instagram bio)</li>
+    <li>Vos signatures email</li>
+    <li>Vos cartes de visite (pour la prochaine impression)</li>
+  </ul>
+
+  <p><strong>Astuce :</strong> utilisez <em>moz.com/local/check-listing</em> ou <em>brightlocal.com</em> pour scanner gratuitement vos mentions et repérer les incohérences.</p>
+
+  <div class="err-callout">
+    <div class="lbl">Effort vs. impact</div>
+    <p>2 à 3 heures de travail méticuleux. Impact <strong>important</strong> : c'est l'un des facteurs les plus pondérés par Google Maps et par les IA pour le scoring local.</p>
+  </div>
+
+  <div class="pg-footer">
+    <span>growth-ia.com</span>
+    <span>11 · Erreur 08</span>
+  </div>
+</div>
+
+<!-- PAGE 12 — ERREUR 9 -->
+<div class="page">
+  <div class="pg-header">
+    <span class="brand">Growth-<span class="dot">IA</span></span>
+    <span>Erreur 09/10</span>
+  </div>
+  <div class="err-label">Erreur n°</div>
+  <div class="err-num">09</div>
+  <h3 class="err-title">Manquer de <em>mentions presse</em> et liens externes.</h3>
+
+  <p><strong>Le constat.</strong> Aucune mention dans Le Progrès, aucun blog local qui parle de vous, aucun lien depuis un site tiers de confiance ? Pour une IA, ça veut dire que <strong>personne n'a jamais validé votre existence</strong> de l'extérieur. C'est un signal d'autorité quasi nul.</p>
+
+  <p><strong>Pourquoi ça compte.</strong> Les IA accordent une note de "trust" qui dépend largement de <em>qui parle de vous, et où</em>. Un lien depuis Le Progrès, France Bleu Lyon, ou même un blog spécialisé sectoriel pèse plus que 100 mentions sur vos propres canaux.</p>
+
+  <p><strong>L'action concrète.</strong></p>
+
+  <ol>
+    <li><strong>Identifiez 3-5 angles "presse"</strong> sur votre métier qui peuvent intéresser un journaliste local : témoignage patient remarquable, action sociale, innovation dans votre pratique, événement (anniversaire 10 ans, ouverture salle, nouveau service)...</li>
+    <li><strong>Contactez les journalistes locaux directement</strong> via LinkedIn (pas l'adresse générique <em>rédaction@</em>). Pitch court de 5 lignes : <em>"Bonjour, je suis X, dentiste à Saint-Priest. Je viens de... Cela pourrait intéresser vos lecteurs car..."</em>.</li>
+    <li><strong>Proposez un article invité</strong> sur 2-3 blogs sectoriels lus dans votre secteur. Un blog avec 500 lecteurs/mois ciblés vaut plus qu'un article TF1.</li>
+    <li><strong>Échangez des liens</strong> avec 2-3 confrères/consoeurs <em>non concurrents</em> mais complémentaires (un dentiste peut linker un orthodontiste, un ortho un kiné de la mâchoire...).</li>
+  </ol>
+
+  <div class="err-callout">
+    <div class="lbl">Le mythe</div>
+    <p>"Je ne suis pas une grande marque, la presse ne parlera pas de moi." <strong>Faux.</strong> Les rédactions locales <em>cherchent</em> du contenu local. 1 article tous les 6 mois suffit largement.</p>
+  </div>
+
+  <div class="pg-footer">
+    <span>growth-ia.com</span>
+    <span>12 · Erreur 09</span>
+  </div>
+</div>
+
+<!-- PAGE 13 — ERREUR 10 -->
+<div class="page">
+  <div class="pg-header">
+    <span class="brand">Growth-<span class="dot">IA</span></span>
+    <span>Erreur 10/10</span>
+  </div>
+  <div class="err-label">Erreur n°</div>
+  <div class="err-num">10</div>
+  <h3 class="err-title">Ne pas <em>mesurer</em>, ne pas <em>itérer</em>.</h3>
+
+  <p><strong>Le constat.</strong> La pire erreur n'est pas de mal faire : c'est de <strong>ne pas mesurer ce qui marche</strong>. Les algorithmes IA évoluent chaque trimestre. Une optimisation qui fonctionne en janvier peut être obsolète en juin. Si vous ne testez pas, vous ne savez pas.</p>
+
+  <p><strong>Comment mesurer.</strong> Tous les mois, testez 10 requêtes types sur chacune des 4 IA majeures (ChatGPT, Claude, Gemini, Perplexity). Notez :</p>
+
+  <ul>
+    <li><strong>Êtes-vous cité ?</strong> Oui / non / partiellement</li>
+    <li><strong>Quelle position ?</strong> 1<sup>er</sup>, 2<sup>e</sup>, 3<sup>e</sup> ou +</li>
+    <li><strong>Quels concurrents</strong> sortent à votre place ?</li>
+    <li><strong>Quel angle</strong> est valorisé (spécialité, prix, accessibilité...) ?</li>
+  </ul>
+
+  <p>Bloquez 30 minutes par mois pour ce rituel. Tenez un Excel simple. Au bout de 3-4 mois, vous verrez <strong>clairement quels leviers ont eu de l'impact</strong> — et lesquels n'ont rien changé.</p>
+
+  <p><strong>Astuce.</strong> Variez les questions : ne testez pas que <em>"meilleur dentiste à X"</em>. Testez aussi <em>"dentiste qui prend les enfants à X"</em>, <em>"orthodontiste urgence X"</em>, <em>"cabinet pas cher X"</em>. Chaque IA a ses préférences sur les <em>longues queues</em>.</p>
+
+  <div class="err-callout">
+    <div class="lbl">L'effet boule de neige</div>
+    <p>Mesurer mensuellement crée un cycle vertueux : vous voyez ce qui marche → vous doublez la mise → vous gagnez en visibilité → vous voyez plus de retombées → ça devient un réflexe. <strong>3 mois suffisent</strong> à installer le réflexe.</p>
+  </div>
+
+  <div class="pg-footer">
+    <span>growth-ia.com</span>
+    <span>13 · Erreur 10</span>
+  </div>
+</div>
+
+<!-- PAGE 14 — CHECKLIST + CTA -->
+<div class="page">
+  <div class="pg-header">
+    <span class="brand">Growth-<span class="dot">IA</span></span>
+    <span>Bonus · Action immédiate</span>
+  </div>
+
+  <h2>La checklist<br><em>de ce week-end</em>.</h2>
+
+  <p style="margin-bottom: 16pt;">Si vous ne deviez retenir qu'une chose de ce guide : voici les <strong>30 premières minutes</strong> à faire ce week-end. Aucune compétence technique requise.</p>
+
+  <div class="checklist">
+    <div class="checklist-item">
+      <div class="box"></div>
+      <div>
+        <div class="txt"><strong>Ouvrir ChatGPT.</strong> Taper <em>"Quel est le meilleur [votre métier] à [votre ville] ?"</em> et lire la réponse.</div>
+        <div class="time">⏱ 3 min</div>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="box"></div>
+      <div>
+        <div class="txt"><strong>Aller sur business.google.com.</strong> Vérifier que les 3 catégories, les 10 photos, la description et les horaires sont à jour.</div>
+        <div class="time">⏱ 10 min</div>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="box"></div>
+      <div>
+        <div class="txt"><strong>Coller votre URL sur validator.schema.org.</strong> Vérifier ce qui ressort. Si vide → priorité absolue.</div>
+        <div class="time">⏱ 2 min</div>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="box"></div>
+      <div>
+        <div class="txt"><strong>Lister 5 annuaires</strong> de l'erreur n°4 où vous n'êtes pas encore. Noter pour cette semaine.</div>
+        <div class="time">⏱ 5 min</div>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="box"></div>
+      <div>
+        <div class="txt"><strong>Envoyer un SMS</strong> à vos 5 derniers clients/patients pour leur demander un avis Google détaillé.</div>
+        <div class="time">⏱ 10 min</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <h3>Besoin d'un <em>coup de main</em> ?</h3>
+    <p>Si vous voulez qu'on s'occupe de tout — audit complet sur 40 requêtes, optimisation des 7 leviers majeurs, suivi mensuel — Growth-IA propose 3 packs adaptés.</p>
+    <div class="links">
+      <a href="https://growth-ia.com/audit">Tester votre visibilité gratuitement (30 secondes)</a>
+      <a href="https://growth-ia.com/tarifs">Voir les 3 packs · -40% lancement</a>
+      <a href="mailto:contact@growth-ia.com">Écrire à Ilyes directement</a>
+    </div>
+  </div>
+
+  <div class="pg-footer">
+    <span>growth-ia.com · contact@growth-ia.com · 06 52 19 77 21</span>
+    <span>14 · Fin</span>
+  </div>
+</div>
+
+<!-- TOOLBAR (visible à l'écran, masqué à l'impression) -->
+<button class="print-toolbar no-print" onclick="window.print()">
+  🖨 Imprimer / Enregistrer en PDF
+</button>
+
+</body>
+</html>
